@@ -1,5 +1,10 @@
+;;; init-org.el --- Personal org-mode configuration -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
+;; TODO DON'T download and build org! It's included with Emacs!
+
 (use-package org
-  :ensure t
   :bind (:map org-mode-map
               ;; Next and previous errors for when using org-occur C-c /
               ("M-n" . next-error)
@@ -179,4 +184,6 @@ This command is usually invoked as an accident.\n")
 ;; (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
 ;; (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
 
-(provide 'jstamant-org)
+
+(provide 'init-org)
+;;; init-org.el ends here
