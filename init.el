@@ -25,7 +25,7 @@
 ;; Bootstrap config
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
-(require 'init-straight)
+(require 'init-package)
 
 
 (setq user-full-name "Justin St-Amant")
@@ -105,7 +105,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;(set-frame-font "DejaVu Sans Mono 10" nil t)
 
 
-(straight-use-package 'command-log-mode)
+(use-package command-log-mode :ensure t)
 
 (require 'init-theme)
 (require 'init-modeline)
@@ -247,7 +247,7 @@ This is great for when you're tinkering on your `user-init-file'"
 
 ;;;; MAGIT SETTINGS
 (use-package magit
-  :straight t
+  :ensure t
   :bind ("C-x g" . magit-status)
   :init
   (when using-windows
@@ -256,37 +256,34 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-org)
 
 ;;;; PAREN SETTINGS
+;; TODO move the toggle for show-paren-mode
 (use-package paren
-  :straight t
+  :ensure t
   :bind ("C-x p" . show-paren-mode))
 
 ;;;; PKGBUILD SETTINGS
 (use-package pkgbuild-mode
-  :straight t
+  :ensure t
   :config
   (setq pkgbuild-update-sums-on-save nil))
 
 ;;;; RAINBOW DELIMITERS SETTINGS
 (use-package rainbow-delimiters
-  :straight t
+  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
-;;;; RECENTF SETTINGS
-(use-package recentf
-  :straight t
-  :defer t
-  :config (recentf-mode 1))
+(recentf-mode 1)
 
 ;;;; SHELL-SCRIPT SETTINGS
 (use-package sh-script
-  :straight t
+  :ensure t
   :config
   (setq sh-basic-offset 2)
   (add-hook 'sh-mode-hook (lambda () (sh-set-shell "bash"))))
 
 ;;;; TERM SETTINGS
 (use-package term
-  :straight t)
+  :ensure t)
 
 ;;;; TREESITTER SETTINGS
 ;; (use-package tree-sitter
@@ -321,7 +318,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; WHICH-KEY SETTINGS
 ;; which-key is responsible for showing your options along a key sequence.
 (use-package which-key
-  :straight t
+  :ensure t
   :init (which-key-mode)
   :diminish which-key-mode
   :config
@@ -443,8 +440,8 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; (use-package welcome-dashboard) is that right??
 
 ;; Packages that don't have any configuration
-(straight-use-package 'lua-mode)
-(straight-use-package 'markdown-mode)
+(use-package lua-mode :ensure t)
+(use-package markdown-mode :ensure t)
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)

@@ -102,7 +102,7 @@
    '("<escape>" . ignore)))
 
 (use-package meow
-  :straight t
+  :ensure t
   :config
   (meow-setup)
   (meow-global-mode 1))

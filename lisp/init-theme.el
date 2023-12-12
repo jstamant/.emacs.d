@@ -17,7 +17,7 @@
 (setq inhibit-x-resources t)
 
 (use-package spacemacs-theme
-  :straight t)
+  :ensure t)
 (global-hl-line-mode 1) ;; This currently overlays faces, so you can't use `describe-face' on them
 ;;(load-theme 'spacemacs-dark t)
 
@@ -53,20 +53,7 @@
   (reapply-themes))
 
 
-(use-package dimmer
-  :straight t
   :init
-  (setq-default dimmer-fraction 0.15)
-  (add-hook 'after-init-hook 'dimmer-mode)
-  :config
-  ;; TODO: file upstream as a PR (a note from Steve Purcell
-  (advice-add 'frame-set-background-mode :after (lambda (&rest args) (dimmer-process-all)))
-  ;; Don't dim in terminal windows. Even with 256 colours it can
-  ;; lead to poor contrast.  Better would be to vary dimmer-fraction
-  ;; according to frame type.
-  (defun sanityinc/display-non-graphic-p ()
-    (not (display-graphic-p)))
-  (add-to-list 'dimmer-exclusion-predicates 'sanityinc/display-non-graphic-p))
 
 
 (provide 'init-theme)
