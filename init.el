@@ -236,13 +236,8 @@ This is great for when you're tinkering on your `user-init-file'"
               ("C-d" . scroll-up-command)))
 ;;(define-key evil-normal-state-map (kbd "SPC h") help-map) ;; Found it! This is how you do maps!
 
-;;;; ISPELL SETTINGS
-(use-package ispell
-  :straight t
-  :config
-  (setq ispell-program-name "/usr/bin/aspell")) ; Change default spell checking program from ispell to aspell
 
-
+(require 'init-spelling)
 (require 'init-ledger)
 
 ;;;; MAGIT SETTINGS
