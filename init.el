@@ -118,16 +118,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (setq delete-by-moving-to-trash t) ; Use trash instead of destroying files
 
-(use-package savehist
-  :straight t
-  :config
-  (setq history-length 100)
-  (savehist-mode 1))
-(use-package saveplace
-  :straight t
-  :config
-  (save-place-mode 1))
-
 ;; Set sentences to be identified by a period and a single space, instead of two spaces
 (setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
 (setq sentence-end-double-space nil)
@@ -211,6 +201,8 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;   (setq emojify-emoji-styles '(unicode github))) ; Don't display ascii emojis
 
 
+(require 'init-completions)
+(require 'init-capf)
 
 ;;;; FLYSPELL SETTINGS
 ;; TODO add a toggle for flyspell mode
@@ -323,13 +315,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 
 
-
-;; (use-package counsel
-;;   :bind (("M-x" . counsel-M-x)
-;;          ("C-x b" . counsel-ibuffer)
-;;          ("C-x C-f" . counsel-find-file)
-;;          :map minibuffer-local-map
-;;          ("C-r" . 'counsel-minibuffer-history)))
 
 
 ;; Helpful provides us with a help-mode that shows prettier and better organized
