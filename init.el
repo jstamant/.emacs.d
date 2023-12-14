@@ -27,6 +27,10 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (require 'init-package)
 
+;; (require 'init-meow)
+(require 'init-evil)
+(require 'init-keybindings)
+
 
 (setq user-full-name "Justin St-Amant")
 
@@ -207,8 +211,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;   (setq emojify-emoji-styles '(unicode github))) ; Don't display ascii emojis
 
 
-(require 'init-meow)
-;; (require 'init-evil)
 
 ;;;; FLYSPELL SETTINGS
 ;; TODO add a toggle for flyspell mode

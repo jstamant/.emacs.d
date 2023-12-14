@@ -34,6 +34,7 @@
    '("f" . find-file)
    '("k" . kill-this-buffer)
    '("o" . other-window)
+   '("p" . projectile-command-map)
    '("s" . split-window-right)
    '("S" . split-window-below)
    '("w" . delete-other-windows))
