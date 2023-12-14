@@ -122,12 +122,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
 (setq sentence-end-double-space nil)
 
-;; Make a quick function to insert today's date in ISO 8601
-;; TODO move this to an abbrev
-(defun dts ()
-  "Insert today's date in ISO 8601 (YYYY-MM-DD)."
-  (interactive)
-  (insert (format-time-string "%Y-%m-%d")))
+(require 'init-abbrev)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; ALIASES
