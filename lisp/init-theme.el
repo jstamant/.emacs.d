@@ -62,7 +62,12 @@
   :init
   (global-hl-todo-mode))
 
+;; Making links clickable and highlighted
+;; TODO add some keybinds for navigating links
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Goto-Address-mode.html
+(use-package goto-addr
   :init
+  (global-goto-address-mode))
 
 
 (provide 'init-theme)
