@@ -221,6 +221,11 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-spelling)
 (require 'init-ledger)
 
+;; TODO put these types in a +lang kind of layer/folder
+(use-package yaml-mode
+  :ensure t
+  :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
+
 ;;;; MAGIT SETTINGS
 (use-package magit
   :ensure t
