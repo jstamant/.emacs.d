@@ -128,10 +128,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (setq delete-by-moving-to-trash t) ; Use trash instead of destroying files
 
-;; Set sentences to be identified by a period and a single space, instead of two spaces
-(setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
-(setq sentence-end-double-space nil)
-
 (require 'init-abbrev)
 
 ;; TODO move these to toggles

@@ -16,6 +16,10 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+;; Set sentences to be identified by a period and a single space, instead of two spaces
+(setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
+(setq sentence-end-double-space nil)
+
 
 (provide 'init-editor)
 ;;; init-editor.el ends here
