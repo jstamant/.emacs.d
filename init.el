@@ -199,25 +199,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; HELM-MODE SETTINGS
 ;;(use-package helm)
 
-;;;; HELP-MODE SETTINGS
-(use-package help-mode
-  :bind-keymap
-  ("C-c h" . help-map) ;; That's it! That's how you bind help-map to another key?? See below, figured it out
-  :bind (:map help-mode-map
-              ;; Some additional navigation bindings
-              ;; TODO move these, as they are emacs keybindings, not really meant for evil mode
-              ("n" . next-line)
-              ("p" . previous-line)
-              ("f" . forward-char)
-              ("b" . backward-char)
-              ("a" . move-beginning-of-line)
-              ("e" . move-end-of-line)
-              ("v" . scroll-up-command)
-              ("V" . scroll-down-command)
-              ("C-d" . scroll-up-command)))
-;;(define-key evil-normal-state-map (kbd "SPC h") help-map) ;; Found it! This is how you do maps!
-
-
 (require 'init-spelling)
 (require 'init-ledger)
 
@@ -278,33 +259,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;   (setq web-mode-css-indent-offset 2)
 ;;   (setq web-mode-code-indent-offset 2))
 
-;;;; WHICH-KEY SETTINGS
-;; which-key is responsible for showing your options along a key sequence.
-(use-package which-key
-  :ensure t
-  :init (which-key-mode)
-  :diminish which-key-mode
-  :config
-  (setq which-key-idle-delay 1.0))
-
-
-
-
-
-;; Helpful provides us with a help-mode that shows prettier and better organized
-;; help content than the default help-mode
-;; I don't like its navigation, though. It doesn't reuse the same window
-;; (use-package helpful)
-;; (use-package helpful
-;;   :custom
-;;   (counsel-describe-function-function #'helpful-callable)
-;;   (counsel-describe-variable-function #'helpful-variable)
-;;   :bind
-;;   ([remap describe-function] . counsel-describe-function)
-;;   ([remap describe-command] . helpful-command)
-;;   ([remap describe-variable] . counsel-describe-variable)
-;;   ([remap describe-key] . helpful-key))
-
+(require 'init-help)
 (require 'init-lisp)
 (require 'init-projectile)
 
