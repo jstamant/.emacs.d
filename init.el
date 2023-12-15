@@ -2,6 +2,15 @@
 ;;; Commentary:
 ;;; Code:
 
+
+
+;; TODO implement some kind of delete-this-file command, maybe with SPC f D
+;; TODO make yes-or-no-p accept single key y/n?
+;; TODO column-indicator at 80
+;; TODO add a sudo open command
+;; TODO add an expand-region key, like SPC e, and make it a Hydra?
+;; TODO implement Emark
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-benchmarking)
@@ -156,7 +165,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; C/C++ MODE SETTINGS
 ;; clangd needs to be installed for LSP-use
 (use-package cc-mode
-  :straight t
+  :ensure t
   :config
   (setq c-default-style "linux")
   (setq c-basic-offset 4))
@@ -168,23 +177,6 @@ This is great for when you're tinkering on your `user-init-file'"
   :bind (:map dired-mode-map
               ("C-s" . dired-isearch-filenames)
               ("TAB" . dired-find-file)))
-;; Place this Inside `use-package dired`???
-;; (use-package dired-single)
-;;     (evil-collection-define-key 'normal 'dired-mode-map
-;;       "h" 'dired-single-up-directory
-;;       "l" 'dired-single-buffer)
-;; (use-package dired-open
-;;   :config
-;;   ;; Doesn't work as expected!
-;;   (add-to-list 'dired-open-functions #'dired-open-xdg t)
-;;   ;; -- OR! --
-;;   (setq dired-open-extensions '(("png" . "feh")
-;;                                 ("mkv" . "mpv"))))
-;; (use-package dired-hide-dotfiles
-;;   :hook (dired-mode . dired-hide-dotfiles-mode)
-;;   :config
-;;   (evil-collection-define-key 'normal 'dired-mode-map
-;;     "H" 'dired-hide-dotfiles-mode))
 
 ;;;; EMOJIFY SETTINGS
 ;; Not sure if I like this mode.

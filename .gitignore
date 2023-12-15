@@ -1,6 +1,13 @@
+.cache/
+
+abbrev_defs
 auto-save-list/
 history
 places
+projectile-bookmarks.eld
 recentf
-straight/
 transient
+
+# Package management directories
+elpa/
+straight/
