@@ -69,6 +69,18 @@
   :init
   (global-goto-address-mode))
 
+;; Help see matching delimiters...especially useful for lisp!
+;; Also identifies unmatched delimiters
+;; https://github.com/Fanael/rainbow-delimiters
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;; TODO move the toggle for show-paren-mode
+;; On by default according to `show-paren-predicate'
+(use-package paren
+  :bind ("C-x p" . show-paren-mode))
+
 
 (provide 'init-theme)
 ;;; init-theme.el ends here

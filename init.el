@@ -229,22 +229,11 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-git)
 (require 'init-org)
 
-;;;; PAREN SETTINGS
-;; TODO move the toggle for show-paren-mode
-(use-package paren
-  :ensure t
-  :bind ("C-x p" . show-paren-mode))
-
 ;;;; PKGBUILD SETTINGS
 (use-package pkgbuild-mode
   :ensure t
   :config
   (setq pkgbuild-update-sums-on-save nil))
-
-;;;; RAINBOW DELIMITERS SETTINGS
-(use-package rainbow-delimiters
-  :ensure t
-  :hook (prog-mode . rainbow-delimiters-mode))
 
 (recentf-mode 1)
 
