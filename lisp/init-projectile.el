@@ -5,7 +5,7 @@
 
 (use-package projectile
   :ensure t
-  ;; :after '(ag rg) ; optionally depends on these two packages
+  :diminish projectile-mode
   :bind-keymap
   ("C-x C-p" . projectile-command-map)
   :init

@@ -14,6 +14,9 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+;; Install any additional use-package dependencies
+(use-package diminish :ensure t)
+
 
 ;; Use this for straight.el
 

@@ -35,6 +35,9 @@
 ;;   ([remap describe-variable] . counsel-describe-variable)
 ;;   ([remap describe-key] . helpful-key))
 
+(use-package eldoc
+  :diminish eldoc-mode)
+
 ;; https://github.com/justbur/emacs-which-key
 (use-package which-key
   :ensure t

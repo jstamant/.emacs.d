@@ -48,6 +48,7 @@ To be used for advising functions."
 (use-package evil-collection
   :ensure t
   :after evil
+  :diminish evil-collection-unimpaired-mode
   :config
   (evil-collection-init))
 
