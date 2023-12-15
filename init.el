@@ -234,6 +234,11 @@ This is great for when you're tinkering on your `user-init-file'"
   (when using-windows
     (setq magit-git-executable "c:/Program Files/Git/bin/git.exe")))
 
+;; Provides editing modes for special git files
+;; https://github.com/magit/git-modes
+;; Automatically adds .gitignore, .gitconfig, .gitattributes to `auto-mode-alist'
+(use-package git-modes :ensure t)
+
 (require 'init-org)
 
 ;;;; PAREN SETTINGS
