@@ -10,7 +10,8 @@
 (tool-bar-mode -1)
 (set-fringe-mode 10)        ; Give some breathing room??
 
-
+;; Fix window size on AwesomeWM
+(setq frame-resize-pixelwise t)
 
 ;; Do not inherit any colors or settings from X resources
 ;; I'm trying to keep everything local to my Emacs install
