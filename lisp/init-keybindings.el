@@ -40,6 +40,7 @@
   "fed" '((lambda () (interactive) (find-file user-init-file)) :which-key "dotfile")
   "fee" '((lambda () (interactive) (find-file (expand-file-name "jrs-evil.el" user-lisp-directory))) :which-key "evil")
   "fek" '((lambda () (interactive) (find-file (expand-file-name "jrs-keybinds.el" user-lisp-directory))) :which-key "keybinds")
+  "fes" 'scratch-buffer
   "fr" 'recentf-open-files
   "fd" 'dired
   "fj" 'dired-jump

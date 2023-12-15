@@ -122,6 +122,7 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-theme)
 (require 'init-modeline)
+(require 'init-dashboard)
 
 (require 'init-editor)
 
