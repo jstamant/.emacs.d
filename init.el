@@ -226,19 +226,7 @@ This is great for when you're tinkering on your `user-init-file'"
   :ensure t
   :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
 
-;;;; MAGIT SETTINGS
-(use-package magit
-  :ensure t
-  :bind ("C-x g" . magit-status)
-  :init
-  (when using-windows
-    (setq magit-git-executable "c:/Program Files/Git/bin/git.exe")))
-
-;; Provides editing modes for special git files
-;; https://github.com/magit/git-modes
-;; Automatically adds .gitignore, .gitconfig, .gitattributes to `auto-mode-alist'
-(use-package git-modes :ensure t)
-
+(require 'init-git)
 (require 'init-org)
 
 ;;;; PAREN SETTINGS
