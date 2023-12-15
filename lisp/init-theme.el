@@ -19,6 +19,8 @@
 
 (use-package spacemacs-theme
   :ensure t)
+
+;; TODO need to add a toggle for hl-line-mode
 (global-hl-line-mode 1) ;; This currently overlays faces, so you can't use `describe-face' on them
 ;;(load-theme 'spacemacs-dark t)
 
@@ -53,6 +55,12 @@
   (setq custom-enabled-themes '(spacemacs-dark))
   (reapply-themes))
 
+;; Highlighting of certain TODO-like keywords
+;; https://github.com/tarsius/hl-todo
+(use-package hl-todo
+  :ensure t
+  :init
+  (global-hl-todo-mode))
 
   :init
 
