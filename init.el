@@ -134,30 +134,10 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-abbrev)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; ALIASES
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;; TODO move these to toggles
-
-;; Major-mode aliases
-(defalias 'o 'org-mode)
-(defalias 'org 'org-mode)
-
 ;; Minor-mode aliases
-(defalias 'afm 'auto-fill-mode)
-(defalias 'fsm 'flyspell-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; PACKAGES
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;; AUTO-REVERT MODE SETTINGS
-;;TODO NEED TO ADD A TOGGLE FOR AUTO-REVERT-MODE
-;; (use-package autorevert
-;;   :config
-;;   (setq global-auto-revert-non-file-buffers t)
-;;   (global-auto-revert-mode 1))
+;; (defalias 'afm 'auto-fill-mode)
+;; (defalias 'fsm 'flyspell-mode)
 
 ;;;; CALC SETTINGS
 (use-package calc
@@ -197,9 +177,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; (use-package flyspell
 ;;   :hook (text-mode . flyspell-mode)) ; Start spell checking on all modes derived from text-mode
 
-;;;; HELM-MODE SETTINGS
-;;(use-package helm)
-
 (require 'init-spelling)
 (require 'init-ledger)
 
@@ -229,15 +206,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; TERM SETTINGS
 (use-package term
   :ensure t)
-
-;;;; TREESITTER SETTINGS
-;; (use-package tree-sitter
-;;   :config
-;;   (global-tree-sitter-mode))
-
-;; (use-package tree-sitter-langs
-;;   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
-;;   :after tree-sitter)
 
 ;;;; VIEW MODE
 (use-package view
