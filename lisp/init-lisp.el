@@ -15,7 +15,7 @@
               ";;; Commentary:\n"
               ";;; Code:\n\n")
       (goto-char (point-max))
-      (insert ";;; " fname " ends here\n"))))
+      (insert "\n;;; " fname " ends here\n"))))
 
 
 (provide 'init-lisp)
