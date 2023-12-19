@@ -88,8 +88,14 @@
 
 ;; TODO move the toggle for show-paren-mode
 ;; On by default according to `show-paren-predicate'
-(use-package paren
-  :bind ("C-x p" . show-paren-mode))
+;; (use-package paren
+;;   :bind ("C-x p" . show-paren-mode))
+
+(jrs/emacs-leader-keys
+  "t"  '(:ignore t :which-key "toggles")
+  "tt" '(counsel-load-theme :which-key "choose theme"))
+
+
 
 
 (provide 'init-theme)

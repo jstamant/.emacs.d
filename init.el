@@ -36,10 +36,13 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (require 'init-package)
 
-;; (require 'init-meow)
-(require 'init-evil)
-(require 'init-keybindings)
 
+;; (require 'init-meow)
+;; (require 'init-evil)
+(require 'init-keybindings)
+;; (use-package expand-region :ensure t
+;;   :bind '("C-\\" er/expand-region))
+(unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
 (setq user-full-name "Justin St-Amant")
 
@@ -167,6 +170,9 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-completions)
 (require 'init-capf)
+(require 'init-files)
+(require 'init-buffers)
+(require 'init-windows)
 
 ;;;; FLYSPELL SETTINGS
 ;; TODO add a toggle for flyspell mode

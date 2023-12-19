@@ -5,11 +5,18 @@
 
 (use-package magit
   :ensure t
-  :bind ("C-x g" . magit-status)
+  :defer t
   :init
   (when using-windows
     (setq magit-git-executable "c:/Program Files/Git/bin/git.exe")))
 
+(jrs/emacs-extended-keys
+  "g" 'magit-status)
+
+(jrs/emacs-leader-keys
+  "g" '(:ignore t :which-key "git")
+  "gg" 'magit
+  "gs" 'magit-status)
 
 ;; Highlight changes in the fringe, aka "gutter"
 ;; https://github.com/dgutov/diff-hl

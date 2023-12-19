@@ -4,8 +4,6 @@
 
 
 (use-package help-mode
-  :bind-keymap
-  ("C-c h" . help-map) ;; That's it! That's how you bind help-map to another key?? See below, figured it out
   :bind (:map help-mode-map
               ;; Some additional navigation bindings
               ;; TODO move these, as they are emacs keybindings, not really meant for evil mode
@@ -18,8 +16,11 @@
               ("v" . scroll-up-command)
               ("V" . scroll-down-command)
               ("C-d" . scroll-up-command)))
-;;(define-key evil-normal-state-map (kbd "SPC h") help-map) ;; Found it! This is how you do maps!
 
+(jrs/emacs-leader-keys
+  "h" '(:ignore t :which-key "help")
+  "hd" '(:ignore t :which-key "describe")
+  "hdm" 'describe-mode)
 
 ;; Helpful provides us with a help-mode that shows prettier and better organized
 ;; help content than the default help-mode

@@ -20,6 +20,9 @@
 (setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
 (setq sentence-end-double-space nil)
 
+(jrs/emacs-leader-keys
+    ";" 'comment-dwim)
+
 
 (provide 'init-editor)
 ;;; init-editor.el ends here

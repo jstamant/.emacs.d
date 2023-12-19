@@ -5,9 +5,8 @@
 
 (use-package projectile
   :ensure t
+  :defer t
   :diminish projectile-mode
-  :bind-keymap
-  ("C-x C-p" . projectile-command-map)
   :init
   (when (file-directory-p "~/programming")
     (setq projectile-project-search-path '("~/programming")))
@@ -15,6 +14,9 @@
   (setq projectile-sort-order 'recentf) ;; Does not apply to 'alien' sort order, which is what I use
   :config
   (projectile-mode 1))
+
+(jrs/emacs-extended-keys
+  "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
 
 ;; Need these to perform ag and ripgrep searches using projectile
 (use-package ag
