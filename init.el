@@ -128,6 +128,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-dashboard)
 
 (require 'init-editor)
+(require 'init-navigation)
 
 (setq delete-by-moving-to-trash t) ; Use trash instead of destroying files
 
