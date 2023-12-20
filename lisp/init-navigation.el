@@ -1,8 +1,9 @@
-;;; init-navigation.el --- Navigation setup using Hydras and other keybindings -*- lexical-binding: t -*-
+;;; init-navigation.el --- Navigation setup using avy, hydras, and other keybindings -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
 
+;; TODO figure out how to defer the loading of Hydra and defhydras
 (use-package hydra
   :ensure t
   :commands 'hydra-navigation/body)
@@ -35,6 +36,10 @@ to scroll a half-window."
 See `jrs/scroll-down-half'."
   (interactive)
   (jrs/scroll-down-half '-))
+
+(use-package avy
+  :ensure t
+  :bind ("C-\\" . avy-goto-char-timer))
 
 
 (provide 'init-navigation)
