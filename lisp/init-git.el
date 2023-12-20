@@ -18,7 +18,8 @@
   "gg" 'magit
   "gs" 'magit-status)
 
-;; Highlight changes in the fringe, aka "gutter"
+;; Highlight changes in the fringe, and navigate and/or stage them
+;; TODO change diff-hl-command-map to a hydra - I don't like the original interface
 ;; https://github.com/dgutov/diff-hl
 (use-package diff-hl
   :ensure t
@@ -28,7 +29,9 @@
          (dired-mode . diff-hl-dired-mode))
   :config
   (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+  ;; Move 'diff-hl-command-map, which is originally on "C-x v"
+  (general-swap-key nil 'diff-hl-mode-map "C-x G" "C-x v"))
 
 
 ;; Provides editing modes for special git files
