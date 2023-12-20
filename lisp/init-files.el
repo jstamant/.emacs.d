@@ -13,7 +13,7 @@
   "fee" '((lambda () (interactive) (find-file (expand-file-name "jrs-evil.el" user-lisp-directory))) :which-key "evil")
   "fek" '((lambda () (interactive) (find-file (expand-file-name "jrs-keybinds.el" user-lisp-directory))) :which-key "keybinds")
   "fes" 'scratch-buffer
-  "fr" 'recentf-open-files
+  "fr" 'consult-recent-file
   "fd" 'dired
   "fj" 'dired-jump)
 
