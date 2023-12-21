@@ -135,11 +135,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-abbrev)
 
-;; TODO move these to toggles
-;; Minor-mode aliases
-;; (defalias 'afm 'auto-fill-mode)
-;; (defalias 'fsm 'flyspell-mode)
-
 ;;;; CALC SETTINGS
 (use-package calc
   :bind ("C-x c" . calc))

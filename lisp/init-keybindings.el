@@ -17,6 +17,12 @@
   "" '(:keymap mode-specific-map :which-key "<leader>"))
 
 
+(general-create-definer jrs/add-toggle-keys
+  :prefix "C-c t")
+(jrs/add-toggle-keys
+ "" '(:ignore t :which-key "toggles"))
+
+
 (general-create-definer jrs/emacs-extended-keys
   :prefix "C-x")
 (jrs/emacs-extended-keys

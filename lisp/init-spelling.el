@@ -13,6 +13,10 @@
   :config
   (setq ispell-program-name "/usr/bin/aspell")) ; Change default spell checking program from ispell to aspell
 
+(defalias 'fsm 'flyspell-mode)
+
+(jrs/add-toggle-keys "s" '(flyspell-mode :which-key "flyspell"))
+
 
 (provide 'init-spelling)
 ;;; init-spelling.el ends here

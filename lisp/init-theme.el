@@ -86,14 +86,14 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
-;; TODO move the toggle for show-paren-mode
 ;; On by default according to `show-paren-predicate'
-;; (use-package paren
-;;   :bind ("C-x p" . show-paren-mode))
+(use-package paren)
 
-(jrs/emacs-leader-keys
-  "t"  '(:ignore t :which-key "toggles")
-  "tt" '(counsel-load-theme :which-key "choose theme"))
+
+(jrs/add-toggle-keys
+  "p" '(show-paren-local-mode :which-key "paren")
+  "C-p" '(show-paren-mode :which-key "global paren")
+  "t" '(consult-theme :which-key "theme"))
 
 
 

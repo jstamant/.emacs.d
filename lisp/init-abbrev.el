@@ -3,10 +3,10 @@
 ;;; Code:
 
 
-;; TODO add toggle for abbrev-mode
-
 (use-package abbrev
   :diminish abbrev-mode)
+
+(jrs/add-toggle-keys "a" 'abbrev-mode)
 
 ;; Enable abbrev-mode everywhere by default
 (setq-default abbrev-mode t)

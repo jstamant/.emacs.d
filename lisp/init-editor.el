@@ -24,5 +24,10 @@
     ";" 'comment-dwim)
 
 
+(defalias 'afm 'auto-fill-mode)
+
+(jrs/add-toggle-keys "f" '(auto-fill-mode :which-key "auto-fill"))
+
+
 (provide 'init-editor)
 ;;; init-editor.el ends here
