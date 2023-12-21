@@ -37,10 +37,10 @@
 (require 'init-package)
 
 
-;; (require 'init-meow)
-;; (require 'init-evil)
 (require 'init-modal)
 (require 'init-keybindings)
+;; (require 'init-meow)
+;; (require 'init-evil)
 ;; (use-package expand-region :ensure t
 ;;   :bind '("C-\\" er/expand-region))
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs

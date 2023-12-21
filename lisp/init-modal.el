@@ -108,8 +108,8 @@
 ;; This adds bindings to the C-c <key> map, which is where meow's
 ;; keypad mode registers and looks for bindings
 ;; TODO make my emacs shortcuts work with meow for modal editing
-(general-create-definer jrs/meow-leader-key
-  :keymaps 'mode-specific-map)
+;; (general-create-definer jrs/meow-leader-key
+;;   :keymaps 'mode-specific-map)
 
 
 (provide 'init-modal)

@@ -9,6 +9,7 @@
 
 (defun meow-setup ()
   (setq meow-cheatsheet-layout meow-cheatsheet-layout-qwerty)
+  (setq meow-expand-hint-counts nil)
   (meow-motion-overwrite-define-key
    '("j" . meow-next)
    '("k" . meow-prev)
@@ -28,16 +29,7 @@
    '("8" . meow-digit-argument)
    '("9" . meow-digit-argument)
    '("0" . meow-digit-argument)
-   '("?" . meow-cheatsheet)
-   '(";" . comment-dwim)
-   '("b" . switch-to-buffer)
-   '("f" . find-file)
-   '("k" . kill-this-buffer)
-   '("o" . other-window)
-   '("p" . projectile-command-map)
-   '("s" . split-window-right)
-   '("S" . split-window-below)
-   '("w" . delete-other-windows))
+   '("?" . meow-cheatsheet))
   (meow-normal-define-key
    '("/" . meow-keypad-describe-key)
    '("0" . meow-expand-0)
@@ -107,6 +99,13 @@
   :config
   (meow-setup)
   (meow-global-mode 1))
+
+(use-package general :ensure t)
+
+;; This adds bindings to the C-c <key> map, which is where meow's
+;; keypad mode registers and looks for bindings
+;; (general-create-definer jrs/meow-leader-key
+;;   :keymaps 'mode-specific-map)
 
 
 (provide 'init-meow)
