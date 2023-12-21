@@ -10,16 +10,22 @@
 
 ;; Enable abbrev-mode everywhere by default
 (setq-default abbrev-mode t)
+(setq save-abbrevs 'silently)
+
 
 ;; Abbrev definitions
 
 ;; See `define-abbrev' for abbref definition arguments
+(clear-abbrev-table global-abbrev-table)
 (define-abbrev-table 'global-abbrev-table
-  `(("td"   "TODO")
+  `(
+    ("atm"  "at the moment")
+    ("dts"  ,(format-time-string "%Y-%m-%d")) ; YYYY-MM-DD (ISO 8601)
+    ("td"   "TODO")
     ("todo" "TODO")
-    ("dts"  ,(format-time-string "%Y-%m-%d")))) ; YYYY-MM-DD (ISO 8601)
+    ))
 
-;; Restores abbrevs from the abbrev_defs file
+(write-abbrev-file)
 (read-abbrev-file)
 
 
