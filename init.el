@@ -39,6 +39,7 @@
 
 ;; (require 'init-meow)
 ;; (require 'init-evil)
+(require 'init-modal)
 (require 'init-keybindings)
 ;; (use-package expand-region :ensure t
 ;;   :bind '("C-\\" er/expand-region))
