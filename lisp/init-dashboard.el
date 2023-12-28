@@ -29,7 +29,7 @@
         (("★" "Star" "Show stars" (lambda (&rest _) (show-stars)) warning)
          ("⚑" nil "Show flags" (lambda (&rest _) (message "flag")) error)
          ("?" "" "?/h" #'show-help nil "<" ">"))))
-(setq dashboard-center-content nil)
+(setq dashboard-center-content t)
 (setq dashboard-show-shortcuts t)
 ;;(setq dashboard-icon-type 'nerd-icons) ; 2023-12-15 currently works better with 'all-the-icons
 (setq dashboard-set-heading-icons t)
@@ -43,7 +43,7 @@
         (bookmarks . 5)
         (registers . 5)))
 
-(dashboard-setup-startup-hook)
+;; (dashboard-setup-startup-hook)
 
 
 (provide 'init-dashboard)

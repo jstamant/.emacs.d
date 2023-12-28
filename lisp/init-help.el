@@ -22,6 +22,7 @@
   "hd" '(:ignore t :which-key "describe")
   "hdm" 'describe-mode)
 
+;; TODO implement helpful - it's much nicer than help-mode
 ;; Helpful provides us with a help-mode that shows prettier and better organized
 ;; help content than the default help-mode
 ;; I don't like its navigation, though. It doesn't reuse the same window

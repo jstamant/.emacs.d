@@ -73,7 +73,8 @@
   (global-hl-todo-mode))
 
 ;; Making links clickable and highlighted
-;; TODO add some keybinds for navigating links
+;; Default binding is "C-c RET" for `goto-address-at-point'
+;; TODO add bindings for navigating links in a file, maybe on C-x l or C-x C-l
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Goto-Address-mode.html
 (use-package goto-addr
   :init

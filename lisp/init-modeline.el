@@ -10,7 +10,7 @@
   (setq doom-modeline-height 25)
   (setq doom-modeline-icon t)
   (setq doom-modeline-modal t
-        doom-modeline-modal-icon t
+        doom-modeline-modal-icon nil
         doom-modeline-modal-modern-icon t))
 
 (use-package nerd-icons

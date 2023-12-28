@@ -9,7 +9,7 @@
 ;; TODO column-indicator at 80
 ;; TODO add a sudo open command
 ;; TODO add an expand-region key, like SPC e, and make it a Hydra?
-;; TODO implement Emark
+;; TODO implement Embark
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 

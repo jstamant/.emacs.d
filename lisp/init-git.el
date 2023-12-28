@@ -3,6 +3,7 @@
 ;;; Code:
 
 
+;; TODO make magit window always open on the right
 (use-package magit
   :ensure t
   :defer t
