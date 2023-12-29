@@ -261,6 +261,8 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; The main one is (use-package dashboard)
 ;; (use-package welcome-dashboard) is that right??
 
+(require 'init-python)
+
 ;; Packages that don't have any configuration
 (use-package lua-mode :ensure t)
 (use-package markdown-mode :ensure t)
