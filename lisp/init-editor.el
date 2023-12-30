@@ -20,9 +20,25 @@
 (setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
 (setq sentence-end-double-space nil)
 
+(general-define-key "C-:" 'exchange-point-and-mark)
+
+;; `comment-line' is my preferred comment command, and suits my usage
+;;  better than `comment-dwim'
+;; (general-translate-key "M-;" "C-x C-;")
+;; (jrs/emacs-leader-keys
+;;     ";" 'comment-line)
 (jrs/emacs-leader-keys
     ";" 'comment-dwim)
 
+
+(use-package expand-region
+  :ensure t
+  :defer t)
+
+(general-define-key "C-;" 'er/expand-region)
+;; TODO making "s" a hydra for expand-region could be good
+(jrs/emacs-leader-keys
+  "s" 'er/expand-region)
 
 (defalias 'afm 'auto-fill-mode)
 
