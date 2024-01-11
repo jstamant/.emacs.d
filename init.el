@@ -266,6 +266,9 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; Packages that don't have any configuration
 (use-package lua-mode :ensure t)
 (use-package markdown-mode :ensure t)
+(use-package vimrc-mode
+  :ensure t
+  :mode "\\.vim\\(rc\\)?\\'")
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
