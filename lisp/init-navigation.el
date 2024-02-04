@@ -8,7 +8,7 @@
   :ensure t
   :commands 'hydra-navigation/body)
 
-(jrs/emacs-extended-keys "m" 'hydra-navigation/body)
+(jrs/emacs-extended-keys "M" 'hydra-navigation/body)
 
 ;; TODO for some reason, the recentering commands don't work
 (with-eval-after-load 'hydra

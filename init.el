@@ -170,6 +170,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-files)
 (require 'init-buffers)
 (require 'init-windows)
+(require 'init-mc)
 
 ;;;; FLYSPELL SETTINGS
 ;; TODO add a toggle for flyspell mode
