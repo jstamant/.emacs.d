@@ -271,6 +271,13 @@ This is great for when you're tinkering on your `user-init-file'"
   :ensure t
   :mode "\\.vim\\(rc\\)?\\'")
 
+(use-package keyfreq
+  :ensure t
+  :config
+  (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1))
+
+
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
   (load custom-file))
