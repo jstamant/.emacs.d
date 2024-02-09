@@ -41,5 +41,18 @@
 (use-package git-modes :ensure t)
 
 
+(defun jrs/magit-commit-reshelve ()
+  "Change the last commit's date using the date-picker.
+
+Functionally, this calls `org-read-date' followed by
+`magit-commit-reshelve' to modify the date.
+
+This may better be achieved by advising magit-commit-reshelve in
+the future."
+  (interactive)
+  (let ((date (org-read-date 'with-time nil nil "When would you like to set this commit?  " nil (format-time-string "%H:%M" (current-time)))))
+    (magit-commit-reshelve date 'update-author)))
+
+
 (provide 'init-git)
 ;;; init-git.el ends here
