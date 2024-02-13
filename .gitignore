@@ -1,4 +1,5 @@
 .cache/
+.lsp-session-v1
 
 abbrev_defs
 auto-save-list/
