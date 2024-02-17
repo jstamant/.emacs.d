@@ -3,6 +3,10 @@
 ;;; Code:
 
 
+(recentf-mode 1)
+(setq recentf-max-saved-items 50)
+
+
 (jrs/emacs-leader-keys
   "f" '(:ignore t :which-key "files")
   "fs" 'save-buffer

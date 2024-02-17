@@ -194,8 +194,6 @@ This is great for when you're tinkering on your `user-init-file'"
   :config
   (setq pkgbuild-update-sums-on-save nil))
 
-(recentf-mode 1)
-
 ;;;; SHELL-SCRIPT SETTINGS
 (use-package sh-script
   :ensure t
