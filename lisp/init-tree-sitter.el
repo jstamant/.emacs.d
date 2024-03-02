@@ -12,7 +12,8 @@
 ;; TODO grammars need to be moved to the tree-sitter folder after they're compiled
 ;; TODO figure out deferring of tree-sitter-langs?
 (use-package tree-sitter-langs
-  :ensure t)
+  :ensure t
+  :diminish tree-sitter-mode)
   ;; :after tree-sitter)
 
 

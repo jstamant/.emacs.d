@@ -26,13 +26,13 @@
   :mode (("\\.tsx?\\'" . tsx-ts-mode)
          ("\\.jsx?\\'" . tsx-ts-mode))
   :hook (tsx-ts-mode . lsp-deferred)
-  :config
+  :init
   (add-to-list 'tree-sitter-major-mode-language-alist '(tsx-ts-mode . tsx)))
 
 (use-package typescript-mode
   :ensure t
   :defer t
-  :config
+  :init
   (setq typescript-indent-level 2))
 
 
