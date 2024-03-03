@@ -147,13 +147,7 @@ This is great for when you're tinkering on your `user-init-file'"
   (setq c-default-style "linux")
   (setq c-basic-offset 4))
 
-;;;; DIRED SETTINGS
-(use-package dired
-  :config
-  (put 'dired-find-alternate-file 'disabled nil)
-  :bind (:map dired-mode-map
-              ("C-s" . dired-isearch-filenames)
-              ("TAB" . dired-find-file)))
+(require 'init-dired)
 
 ;;;; EMOJIFY SETTINGS
 ;; Not sure if I like this mode.
