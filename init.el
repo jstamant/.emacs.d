@@ -251,6 +251,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; (use-package welcome-dashboard) is that right??
 
 (require 'init-python)
+(require 'init-mermaid)
 
 ;; Packages that don't have any configuration
 (use-package lua-mode :ensure t)
