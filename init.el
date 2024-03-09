@@ -203,22 +203,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (use-package view
   :bind ("C-x v" . view-mode))
 
-(use-package web-mode
-  :ensure t
-  :mode
-  "\\.css\\'"
-  "\\.htaccess\\'"
-  "\\.html?\\'"
-  "\\.twig\\'"
-  "\\.php\\'"
-  "\\.xml\\'"
-  :config
-  ;; Make .html files recognize Twig templates by default
-  ;; (setq web-mode-engines-alist '(("twig" . "\\.html\\'")))
-  ;; web-mode indentation settings
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
+(require 'init-web)
 
 (require 'init-help)
 (require 'init-lisp)
