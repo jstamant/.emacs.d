@@ -139,13 +139,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (use-package calc
   :bind ("C-x c" . calc))
 
-;;;; C/C++ MODE SETTINGS
-;; clangd needs to be installed for LSP-use
-(use-package cc-mode
-  :ensure t
-  :config
-  (setq c-default-style "linux")
-  (setq c-basic-offset 4))
+(require 'init-c)
 
 (require 'init-dired)
 
