@@ -134,6 +134,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (setq delete-by-moving-to-trash t) ; Use trash instead of destroying files
 
 (require 'init-abbrev)
+(require 'init-flymake)
 
 ;;;; CALC SETTINGS
 (use-package calc
@@ -223,11 +224,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;   :commands (unfill-region unfill-paragraph unfill-toggle)
 ;;   :init
 ;;   (global-set-key [remap fill-paragraph] #'unfill-toggle))
-
-
-;; Another package to implement one day:
-;; The main one is (use-package dashboard)
-;; (use-package welcome-dashboard) is that right??
 
 (require 'init-python)
 (require 'init-mermaid)
