@@ -2,9 +2,18 @@
 ;;; Commentary:
 ;;; Code:
 
+
 (column-number-mode 1)
 ;; TODO - add a toggle for this
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(use-package highlight-indent-guides
+  :ensure t
+  :diminish highlight-indent-guides-mode
+  :hook (prog-mode . highlight-indent-guides-mode)
+  :init
+  (setq highlight-indent-guides-method 'bitmap)
+  (setq highlight-indent-guides-auto-character-face-perc 50))
+
 (add-hook 'conf-mode-hook 'display-line-numbers-mode)
 ;; Or...Disable line numbers for some modes
 ;;(dolist (mode '(org-mode-hook
@@ -12,7 +21,9 @@
 ;;                eshell-mode-hook))
 ;;  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-(setq show-trailing-whitespace t)
+;; (setq-default show-trailing-whitespace t) ;; setq-default to enable globally
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
+
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
