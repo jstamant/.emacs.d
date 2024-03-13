@@ -52,11 +52,14 @@
   "t if emacs is running in windows")
 
 (defvar drive-directory
-  (if (not using-windows)
-      "~/drive/"
-    (let ((userprofile (replace-regexp-in-string "\\\\" "/" (getenv "USERPROFILE"))))
-      (concat userprofile "/Google Drive/")))
-  "The absolute path to the Google Drive directory under Linux or Windows.")
+  (cond ((equal system-type 'gnu/linux)
+         "~/drive/")
+        ((equal system-type 'darwin)
+         "~/Google Drive/My Drive/")
+        ((equal system-type 'windows-nt)
+         (let ((userprofile (replace-regexp-in-string "\\\\" "/" (getenv "USERPROFILE"))))
+           (concat userprofile "/Google Drive/"))))
+  "The absolute path to the Google Drive directory under any operating system.")
 
 (defvar onedrive-directory
   (if using-windows
