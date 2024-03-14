@@ -47,10 +47,6 @@
 
 (setq user-full-name "Justin St-Amant")
 
-(defvar using-windows
-  (equal window-system 'w32)
-  "t if emacs is running in windows")
-
 (defvar drive-directory
   (cond ((equal system-type 'gnu/linux)
          "~/drive/")
@@ -62,12 +58,12 @@
   "The absolute path to the Google Drive directory under any operating system.")
 
 (defvar onedrive-directory
-  (if using-windows
+  (when (eq system-type 'windows-nt)
       (let ((userprofile (replace-regexp-in-string "\\\\" "/" (getenv "USERPROFILE"))))
         (concat userprofile "/OneDrive - Manitoba Hydro/")))
   "The absolute path to your work OneDrive directory. Only for Windows.")
 
-(if using-windows
+(when (eq system-type 'windows-nt)
     (setenv "HOME" (getenv "USERPROFILE")))
 
 (defun at-work ()

@@ -8,7 +8,7 @@
   :ensure t
   :defer t
   :init
-  (when using-windows
+  (when (eq system-type 'windows-nt)
     (setq magit-git-executable "c:/Program Files/Git/bin/git.exe")))
 
 (jrs/emacs-extended-keys
