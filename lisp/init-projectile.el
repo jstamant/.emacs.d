@@ -3,14 +3,17 @@
 ;;; Code:
 
 
-;; TODO figure out how to prevent projectile from searching package directories of C-x p s *
 (use-package projectile
   :ensure t
   :defer t
   :diminish projectile-mode
   :init
-  (when (file-directory-p "~/programming")
-    (setq projectile-project-search-path '("~/programming")))
+  (let ((directory (cond ((eq system-type 'gnu/linux)
+                          "~/programming")
+                         ((eq system-type 'darwin)
+                          "~/Developer"))))
+    (when (file-directory-p directory)
+      (setq projectile-project-search-path `(,directory))))
   (setq projectile-switch-project-action #'projectile-find-file)
   (setq projectile-sort-order 'recentf) ;; Does not apply to 'alien' sort order, which is what I use
   :config
