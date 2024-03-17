@@ -4,6 +4,9 @@
 
 
 (use-package dired
+  :init
+  (when (eq system-type 'darwin)
+    (setq ls-lisp-use-insert-directory-program nil)) ;; Uses ls-lisp to prevent errors on Mac
   :config
   (put 'dired-find-alternate-file 'disabled nil)
   :bind (:map dired-mode-map
