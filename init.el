@@ -208,6 +208,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-tree-sitter)
 
 (require 'init-javascript)
+(require 'init-vue)
 
 ;; I don't find this package useful yet?
 ;; Don't forget to use M-; for comment-dwim
