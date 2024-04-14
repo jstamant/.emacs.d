@@ -235,6 +235,12 @@ This is great for when you're tinkering on your `user-init-file'"
   :ensure t
   :mode "\\.vim\\(rc\\)?\\'")
 
+(use-package json-mode
+  :ensure t
+  :mode "\\.json\\'"
+  :init
+  (setq js-indent-level 2))
+
 (use-package keyfreq
   :ensure t
   :config
