@@ -9,9 +9,11 @@
   :config
   (setq doom-modeline-height 25)
   (setq doom-modeline-icon t)
-  (setq doom-modeline-modal t
-        doom-modeline-modal-icon nil
-        doom-modeline-modal-modern-icon t))
+  (setq doom-modeline-modal t)
+  (setq doom-modeline-modal-icon nil)
+  (setq doom-modeline-modal-modern-icon t)
+  (setq doom-modeline-minor-modes t)
+  (setq doom-modeline-buffer-file-name-style 'relative-from-project))
 
 (use-package nerd-icons
   :ensure t)
