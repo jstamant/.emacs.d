@@ -13,29 +13,27 @@
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :init
-  (setq lsp-keymap-prefix "C-c l")
   :hook
-  (python-mode . lsp-mode)
-  (lsp-mode . lsp-enable-which-key-integration))
+  (python-mode . lsp-deferred)
+  (lsp-mode . lsp-enable-which-key-integration)
+  :init
+  (setq lsp-auto-execute-action nil) ;; Do not auto-execute single actions
+  (setq lsp-completion-provider :none)
+  (setq lsp-enable-indentation nil)
+  (setq lsp-enable-snippet nil)
+  (setq lsp-enable-symbol-highlighting nil)
+  (setq lsp-keymap-prefix "C-c l")
+  :config
+  ;; (add-to-list 'lsp--formatting-indent-alist '(tsx-ts-mode . typescript-indent-level))
+  )
 
 ;; ;; optionally
-;; (use-package lsp-ui :commands lsp-ui-mode)
-;; ;; if you are helm user
-;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
-;; ;; if you are ivy user
-;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+;; (use-package consult-lsp :ensure t)
+;; (use-package lsp-ui) ;; with this, you can see the code-actions, and re-enable auto-execute above
+;; (use-package lsp-treemacs)
 
 ;; ;; optionally if you want to use debugger
 ;; (use-package dap-mode)
-;; ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-
-;; (use-package lsp-ui
-;;   :hook (lsp-mode . lsp-ui-mode))
-;; (setq lsp-ui-doc-position 'bottom)
-;; (setq lsp-ui-sideline-enable nil)
-;; (setq lsp-ui-sideline-show-hover nil)
 
 
 (provide 'init-lsp)
