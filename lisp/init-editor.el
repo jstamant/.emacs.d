@@ -24,6 +24,9 @@
 ;; (setq-default show-trailing-whitespace t) ;; setq-default to enable globally
 (add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
+(use-package autorevert
+  :diminish auto-revert-mode)
+
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
