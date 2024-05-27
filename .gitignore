@@ -8,6 +8,7 @@ places
 projectile-bookmarks.eld
 recentf
 transient
+tree-sitter/
 
 # Package management directories
 elpa/
