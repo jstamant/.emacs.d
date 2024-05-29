@@ -6,6 +6,15 @@
 (recentf-mode 1)
 (setq recentf-max-saved-items 50)
 
+(defun sudo (filename)
+  "Calls `find-file' with sudo privileges."
+  (interactive "GSudo find-file: ")
+  (find-file (concat "/sudo::" (expand-file-name filename))))
+
+(defun sudo-edit ()
+  "Opens the currently visited file with sudo privileges."
+  (interactive)
+  (find-alternate-file (concat "/sudo::" (expand-file-name buffer-file-name))))
 
 (jrs/emacs-leader-keys
   "f" '(:ignore t :which-key "files")
