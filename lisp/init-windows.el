@@ -16,5 +16,8 @@
   "w2" 'split-window-below
   "w3" 'split-window-right)
 
+(keymap-set global-map "M-o" 'other-window)
+
+
 (provide 'init-windows)
 ;;; init-windows.el ends here
