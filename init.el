@@ -51,7 +51,12 @@
   (cond ((equal system-type 'gnu/linux)
          "~/drive/")
         ((equal system-type 'darwin)
-         "~/Google Drive/My Drive/")
+         (cond ((file-directory-p "~/Google Drive/My Drive/")
+                ;; This is when only one account is added
+                "~/Google Drive/My Drive/")
+               ((file-directory-p "~/jstamant24@gmail.com - Google Drive/My Drive/")
+                ;; This is when more than one accounts are added
+                "~/jstamant24@gmail.com - Google Drive/My Drive/")))
         ((equal system-type 'windows-nt)
          (let ((userprofile (replace-regexp-in-string "\\\\" "/" (getenv "USERPROFILE"))))
            (concat userprofile "/Google Drive/"))))
