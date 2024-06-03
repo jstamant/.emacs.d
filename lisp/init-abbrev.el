@@ -1,4 +1,4 @@
-;;; init-abbrev.el --- Insert description here -*- lexical-binding: t -*-
+;;; init-abbrev.el --- Abbrev setup -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
