@@ -56,7 +56,9 @@
 
 (defalias 'afm 'auto-fill-mode)
 
-(jrs/add-toggle-keys "f" '(auto-fill-mode :which-key "auto-fill"))
+(jrs/add-toggle-keys
+  "f" '(auto-fill-mode :which-key "auto-fill")
+  "h" 'global-hl-line-mode)
 
 
 (provide 'init-editor)
