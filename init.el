@@ -212,6 +212,7 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-tree-sitter)
 
+(require 'init-cfml)
 (require 'init-javascript)
 (require 'init-vue)
 
