@@ -219,6 +219,8 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-nix)
 
+(require 'init-formatter)
+
 ;; I don't find this package useful yet?
 ;; Don't forget to use M-; for comment-dwim
 ;; (use-package evil-nerd-commenter
