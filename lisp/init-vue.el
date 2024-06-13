@@ -1,7 +1,13 @@
 ;;; init-vue.el --- Editor setup for Vue using polymode -*- lexical-binding: t -*-
 ;;; Commentary:
 
-;; I'm avoiding `web-mode', as it noticeably slows this polymode down
+;; I'm avoiding `web-mode' as one of the poly-innermodes, as it
+;; noticeably slows this polymode down
+
+;; `web-mode' by itself works, but is slow
+
+;; `vue-mode' works, but the script portion isn't highlighted, and the
+;; html portion is slower than web-mode
 
 ;;; Code:
 
@@ -19,7 +25,8 @@
    :tail-mode 'host)
   (define-innermode
    poly-vue-script-innermode
-   :mode 'tsx-ts-mode
+   ;; :mode 'tsx-ts-mode
+   :mode 'js-mode
    :head-matcher "<[[:space:]]*\\(?:script\\)[[:space:]]*>"
    :tail-matcher "</[[:space:]]*\\(?:script\\)[[:space:]]*>"
    :head-mode 'host
@@ -63,6 +70,12 @@
      poly-vue-template-innermode
      poly-vue-script-innermode
      poly-vue-style-innermode)))
+
+
+;; TODO - Implement a formatter for vue-mode - polymode splits the
+;; buffer into different modes, so this doesn't really work
+;; (with-eval-after-load 'apheleia
+;;   (add-to-list 'apheleia-mode-alist '(vue-mode . prettier-javascript)))
 
 
 (provide 'init-vue)
