@@ -13,3 +13,8 @@ tree-sitter/
 # Package management directories
 elpa/
 straight/
+
+# org-roam related files and directories
+.org-id-locations
+org-roam.db
+org-persist/
