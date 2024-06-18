@@ -6,7 +6,6 @@ auto-save-list/
 bookmarks
 history
 places
-projectile-bookmarks.eld
 recentf
 transient
 tree-sitter/
@@ -19,3 +18,7 @@ straight/
 .org-id-locations
 org-roam.db
 org-persist/
+
+# Projectile-related files and directories
+projectile-bookmarks.eld
+projectile.cache
