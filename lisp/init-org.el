@@ -2,9 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-;; TODO DON'T download and build org! It's included with Emacs!
 
 (use-package org
+  :ensure t
   :bind (:map org-mode-map
               ;; Next and previous errors for when using org-occur C-c /
               ("M-n" . next-error)
@@ -133,10 +133,10 @@ This command is usually invoked as an accident.\n")
            (file+headline ,(car org-agenda-files) "In")
            "* %^{Brief description}\n%u%?")
           ("J" "Journal entry - with prompts" plain
-           (file+datetree "reference/journal.org")
+           (file+olp+datetree "reference/journal.org")
            "TEXT\n\nWhat did I accomplish?\n- \n\nWhat did I learn?\n- \n\nWhat am I grateful for?\n- \n\n")
           ("j" "Journal entry - plain" plain
-           (file+datetree "reference/journal.org") ""))))
+           (file+olp+datetree "reference/journal.org") ""))))
 
 
 (use-package org-roam
