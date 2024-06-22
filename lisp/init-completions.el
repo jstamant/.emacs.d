@@ -8,6 +8,8 @@
   :ensure t
   :config
   (setq history-length 100)
+  ;; Also make the kill-ring persistent
+  (add-to-list 'savehist-additional-variables 'kill-ring)
   (savehist-mode 1))
 
 ;; Saves last-visited point in buffers
