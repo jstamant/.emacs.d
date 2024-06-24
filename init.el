@@ -3,14 +3,6 @@
 ;;; Code:
 
 
-
-;; TODO implement some kind of delete-this-file command, maybe with SPC f D
-;; TODO make yes-or-no-p accept single key y/n?
-;; TODO column-indicator at 80
-;; TODO add a sudo open command
-;; TODO add an expand-region key, like SPC e, and make it a Hydra?
-;; TODO implement Embark
-
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-benchmarking)

@@ -10,7 +10,7 @@
 (tool-bar-mode -1)
 (set-fringe-mode 10)        ; Give some breathing room??
 
-;; Fix window size on AwesomeWM
+;; Fix window size on AwesomeWM and tiling window managers
 (setq frame-resize-pixelwise t)
 
 ;; Do not inherit any colors or settings from X resources
@@ -21,8 +21,8 @@
   :ensure t)
 
 ;; TODO need to add a toggle for hl-line-mode
-(global-hl-line-mode 1) ;; This currently overlays faces, so you can't use `describe-face' on them
 ;;(load-theme 'spacemacs-dark t)
+(global-hl-line-mode 1) ;; This overlays faces, so you can't use `describe-face' on them
 
 ;; Don't prompt to confirm theme safety
 (setq custom-safe-themes t)
