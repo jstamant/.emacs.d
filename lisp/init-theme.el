@@ -17,43 +17,14 @@
 ;; I'm trying to keep everything local to my Emacs install
 (setq inhibit-x-resources t)
 
-(use-package spacemacs-theme
-  :ensure t)
-
-;; TODO need to add a toggle for hl-line-mode
-;;(load-theme 'spacemacs-dark t)
 (global-hl-line-mode 1) ;; This overlays faces, so you can't use `describe-face' on them
 
 ;; Don't prompt to confirm theme safety
 (setq custom-safe-themes t)
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(spacemacs-dark))
+(setq-default custom-enabled-themes '(modus-vivendi))
 
-;; Ensure that themes will be applied even if they have not been customized
-(defun reapply-themes ()
-  "Forcibly load the themes listed in `custom-enabled-themes'."
-  (dolist (theme custom-enabled-themes)
-    (unless (custom-theme-p theme)
-      (load-theme theme)))
-  (custom-set-variables `(custom-enabled-themes (quote ,custom-enabled-themes))))
-
-(add-hook 'after-init-hook 'reapply-themes)
-
-
-;; Toggle between light and dark
-
-(defun light ()
-  "Activate a light color theme."
-  (interactive)
-  (setq custom-enabled-themes '(spacemacs-light))
-  (reapply-themes))
-
-(defun dark ()
-  "Activate a dark color theme."
-  (interactive)
-  (setq custom-enabled-themes '(spacemacs-dark))
-  (reapply-themes))
 
 ;; Prettify non-printing characters
 ;; Line feed character ^L can be inserted with
@@ -64,6 +35,7 @@
   :ensure t
   :diminish page-break-lines-mode
   :init (global-page-break-lines-mode))
+
 
 ;; Highlighting of certain TODO-like keywords
 ;; https://github.com/tarsius/hl-todo
@@ -87,6 +59,7 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
+
 ;; On by default according to `show-paren-predicate'
 (use-package paren)
 
@@ -94,9 +67,8 @@
 (jrs/add-toggle-keys
   "p" '(show-paren-local-mode :which-key "paren")
   "C-p" '(show-paren-mode :which-key "global paren")
-  "t" '(consult-theme :which-key "theme"))
-
-
+  "t" '(consult-theme :which-key "theme")
+  "T" 'toggle-theme)
 
 
 (provide 'init-theme)
