@@ -44,13 +44,17 @@
   :init
   (global-hl-todo-mode))
 
+
 ;; Making links clickable and highlighted
 ;; Default binding is "C-c RET" for `goto-address-at-point'
-;; TODO add bindings for navigating links in a file, maybe on C-x l or C-x C-l
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Goto-Address-mode.html
 (use-package goto-addr
   :init
   (global-goto-address-mode))
+
+(with-eval-after-load 'goto-addr
+  (keymap-set goto-address-highlight-keymap "C-c C-o" 'goto-address-at-point))
+
 
 ;; Help see matching delimiters...especially useful for lisp!
 ;; Also identifies unmatched delimiters
