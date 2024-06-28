@@ -8,7 +8,6 @@
 (tooltip-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
-(set-fringe-mode 10)        ; Give some breathing room??
 
 ;; Fix window size on AwesomeWM and tiling window managers
 (setq frame-resize-pixelwise t)
