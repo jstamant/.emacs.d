@@ -25,6 +25,8 @@
 (setq-default custom-enabled-themes '(modus-vivendi))
 
 
+(load-theme 'modus-vivendi)
+
 ;; Prettify non-printing characters
 ;; Line feed character ^L can be inserted with
 ;; C-q `quoted-insert' C-l
