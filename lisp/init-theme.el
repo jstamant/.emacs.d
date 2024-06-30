@@ -21,11 +21,20 @@
 ;; Don't prompt to confirm theme safety
 (setq custom-safe-themes t)
 
-;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(modus-vivendi))
 
+;; Get a more recent version than what's included with Emacs
+;; There are many customization options for Prot's themes
+;; https://protesilaos.com/emacs/modus-themes
+(use-package modus-themes
+  :ensure t
+  :config
+  (setq modus-themes-bold-constructs t)
+  (setq modus-themes-italic-constructs nil)
+  (setq modus-themes-mixed-fonts t)
+  ;; (setq modus-vivendi-palette-overrides
+  ;;       '((bg-main "#222222")))
+  (load-theme 'modus-vivendi))
 
-(load-theme 'modus-vivendi)
 
 ;; Prettify non-printing characters
 ;; Line feed character ^L can be inserted with
