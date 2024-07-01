@@ -6,7 +6,6 @@
 (use-package help-mode
   :bind (:map help-mode-map
               ;; Some additional navigation bindings
-              ;; TODO move these, as they are emacs keybindings, not really meant for evil mode
               ("n" . next-line)
               ("p" . previous-line)
               ("f" . forward-char)
@@ -22,7 +21,7 @@
   "hd" '(:ignore t :which-key "describe")
   "hdm" 'describe-mode)
 
-;; TODO implement helpful - it's much nicer than help-mode
+
 ;; Helpful provides us with a help-mode that shows prettier and better organized
 ;; help content than the default help-mode
 ;; I don't like its navigation, though. It doesn't reuse the same window
@@ -37,8 +36,10 @@
 ;;   ([remap describe-variable] . counsel-describe-variable)
 ;;   ([remap describe-key] . helpful-key))
 
+
 (use-package eldoc
   :diminish eldoc-mode)
+
 
 ;; https://github.com/justbur/emacs-which-key
 (use-package which-key

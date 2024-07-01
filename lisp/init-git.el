@@ -3,7 +3,6 @@
 ;;; Code:
 
 
-;; TODO make magit window always open on the right
 (use-package magit
   :ensure t
   :defer t
@@ -20,7 +19,6 @@
   "gs" 'magit-status)
 
 ;; Highlight changes in the fringe, and navigate and/or stage them
-;; TODO change diff-hl-command-map to a hydra - I don't like the original interface
 ;; https://github.com/dgutov/diff-hl
 (use-package diff-hl
   :ensure t
@@ -39,19 +37,6 @@
 ;; https://github.com/magit/git-modes
 ;; Automatically adds .gitignore, .gitconfig, .gitattributes to `auto-mode-alist'
 (use-package git-modes :ensure t)
-
-
-(defun jrs/magit-commit-reshelve ()
-  "Change the last commit's date using the date-picker.
-
-Functionally, this calls `org-read-date' followed by
-`magit-commit-reshelve' to modify the date.
-
-This may better be achieved by advising magit-commit-reshelve in
-the future."
-  (interactive)
-  (let ((date (org-read-date 'with-time nil nil "When would you like to set this commit?  " nil (format-time-string "%H:%M" (current-time)))))
-    (magit-commit-reshelve date 'update-author)))
 
 
 (provide 'init-git)

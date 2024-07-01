@@ -3,14 +3,12 @@
 ;;; Code:
 
 
-;; TODO figure out how to defer the loading of Hydra and defhydras
 (use-package hydra
   :ensure t
   :commands 'hydra-navigation/body)
 
 (jrs/emacs-extended-keys "M" 'hydra-navigation/body)
 
-;; TODO for some reason, the recentering commands don't work
 (with-eval-after-load 'hydra
   (defhydra hydra-navigation ()
     "NAVIGATION MODE"
@@ -21,6 +19,7 @@
     ("l" forward-char)
     ("r" move-to-window-line-top-bottom)
     ("u" scroll-down-command)
+    ;; For some reason, the recentering commands don't work
     ("z" recenter-top-bottom)))
 
 (defun jrs/scroll-down-half (&optional ARG)

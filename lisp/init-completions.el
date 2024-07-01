@@ -12,11 +12,13 @@
   (add-to-list 'savehist-additional-variables 'kill-ring)
   (savehist-mode 1))
 
+
 ;; Saves last-visited point in buffers
 (use-package saveplace
   :ensure t
   :config
   (save-place-mode 1))
+
 
 ;; Defines the style of completions in the minibuffer
 ;; https://github.com/oantolin/orderless
@@ -26,12 +28,14 @@
   (completion-styles '(orderless basic))
   (completion-category-overrides nil))
 
+
 ;; Enables rich annotations in the minibuffer
 ;; https://github.com/minad/marginalia
 (use-package marginalia
   :ensure t
   :init
   (marginalia-mode))
+
 
 ;; Vertico is for minibuffer completions only
 ;; https://github.com/minad/vertico
@@ -42,10 +46,8 @@
 
 
 ;; `completing-read' via Consult
-;; TODO add keybinds for Consult
 ;; https://github.com/minad/consult
-(use-package consult
-  :ensure t)
+(use-package consult :ensure t)
 
 
 (provide 'init-completions)

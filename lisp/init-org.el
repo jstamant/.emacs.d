@@ -40,7 +40,6 @@ This command is usually invoked as an accident.\n")
 
   ;; Set org-directory, agenda files, and main org files
   ;;Implement some kind of also do a function for 'at home' or 'at work' boolean
-  ;; TODO use org-agenda-file-to-front to bring the default
   ;; I should also bind org-cycle-agenda-files (C-' and C-,) globally
   (if (at-work)
       (progn
@@ -67,12 +66,11 @@ This command is usually invoked as an accident.\n")
   (setq org-lowest-priority ?5)
   (setq org-default-priority ?5)
   ;; Set priority faces to be color-coded like in Todoist
-  ;; TODO get this to automatically assign colors from the current theme
-  (setq org-priority-faces
-        '((?1 . "orangered")
-          (?2 . "darkorange")
-          (?3 . "cornflowerblue")
-          (?4 . "darkgray")))
+  ;; (setq org-priority-faces
+  ;;       '((?1 . "orangered")
+  ;;         (?2 . "darkorange")
+  ;;         (?3 . "cornflowerblue")
+  ;;         (?4 . "darkgray")))
   ;; Some general org-mode preferences and global options
   (setq org-todo-keywords
         '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)"
@@ -119,9 +117,6 @@ This command is usually invoked as an accident.\n")
 
 (defun jstamant/init-org-capture ()
   "Set all my org-capture settings."
-  ;; TODO move these bindings to general.el
-  ;; (global-set-key "\C-cc" 'org-capture)
-  ;; (global-set-key "\C-cl" 'org-store-link)
   (setq org-capture-templates
         `(("t" "TODO" entry
            (file+headline ,(car org-agenda-files) "Tasks")

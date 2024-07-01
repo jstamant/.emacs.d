@@ -4,7 +4,6 @@
 
 
 (column-number-mode 1)
-;; TODO - add a toggle for this
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (use-package highlight-indent-guides
   :ensure t
@@ -50,7 +49,6 @@
   :defer t)
 
 (general-define-key "C-;" 'er/expand-region)
-;; TODO making "s" a hydra for expand-region could be good
 (jrs/emacs-leader-keys
   "s" 'er/expand-region)
 

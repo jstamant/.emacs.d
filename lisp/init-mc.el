@@ -6,7 +6,7 @@
 (use-package multiple-cursors
   :ensure t)
 
-;; TODO figure out how to defer the loading of Hydra and defhydras
+
 (use-package hydra
   :ensure t
   :commands 'hydra-mc/body)

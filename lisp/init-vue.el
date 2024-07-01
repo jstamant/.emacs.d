@@ -72,8 +72,7 @@
      poly-vue-style-innermode)))
 
 
-;; TODO - Implement a formatter for vue-mode - polymode splits the
-;; buffer into different modes, so this doesn't really work
+;; Polymode splits the buffer into different modes, so this doesn't really work
 ;; (with-eval-after-load 'apheleia
 ;;   (add-to-list 'apheleia-mode-alist '(vue-mode . prettier-javascript)))
 

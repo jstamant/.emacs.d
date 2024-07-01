@@ -4,14 +4,13 @@
 
 
 ;; Completion-at-point mechanism
-;; TODO implement keybinding for Corfu
 ;; https://github.com/minad/corfu
 (use-package corfu
   :ensure t
   :init
   (global-corfu-mode))
 
-;; TODO implement some capf extensions
+
 ;; ;; Extensions for completion-at-point
 ;; ;; https://github.com/minad/cape
 ;; (use-package cape

@@ -113,11 +113,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; Miscellaneous settings
 (setq scroll-preserve-screen-position t) ; Keep point position on screen when scrolling
 
-;; TODO change font? Set as default, but customizable
-;;(set-face-attribute 'default nil :font "DejaVu Sans Mono" :height 100)
-;;(set-frame-font "DejaVu Sans Mono 10" nil t)
-
-
 (use-package command-log-mode :ensure t)
 
 (require 'init-theme)
@@ -142,7 +137,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 ;;;; EMOJIFY SETTINGS
 ;; Not sure if I like this mode.
-;; TODO add a toggle for this, which should be a hydra
 ;; (use-package emojify
 ;;   :hook (after-init . global-emojify-mode)
 ;;   :init
@@ -158,14 +152,12 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-mc)
 
 ;;;; FLYSPELL SETTINGS
-;; TODO add a toggle for flyspell mode
 ;; (use-package flyspell
 ;;   :hook (text-mode . flyspell-mode)) ; Start spell checking on all modes derived from text-mode
 
 (require 'init-spelling)
 (require 'init-ledger)
 
-;; TODO put these types in a +lang kind of layer/folder
 (use-package yaml-mode
   :ensure t
   :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))

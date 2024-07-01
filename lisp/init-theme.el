@@ -40,7 +40,6 @@
 ;; Line feed character ^L can be inserted with
 ;; C-q `quoted-insert' C-l
 ;; https://github.com/purcell/page-break-lines
-;; TODO add a toggle for page-break-lines-mode
 (use-package page-break-lines
   :ensure t
   :diminish page-break-lines-mode

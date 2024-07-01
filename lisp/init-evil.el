@@ -3,8 +3,6 @@
 ;;; Code:
 
 
-;; TODO set SPC binding for evil-lookup, which is on K...man pages!
-
 ;; https://github.com/emacs-evil/evil
 (use-package evil
   :ensure t
