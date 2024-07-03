@@ -8,7 +8,9 @@
   :defer t
   :init
   (when (eq system-type 'windows-nt)
-    (setq magit-git-executable "c:/Program Files/Git/bin/git.exe")))
+    (setq magit-git-executable "c:/Program Files/Git/bin/git.exe"))
+  :config
+  (setq magit-diff-refine-hunk 'all))
 
 (jrs/emacs-extended-keys
   "g" 'magit-status)
