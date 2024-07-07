@@ -50,5 +50,27 @@
 (use-package consult :ensure t)
 
 
+;; Embark is for context-sensitive minibuffer actions
+;; https://github.com/oantolin/embark
+(use-package embark
+  :ensure t
+  :config
+  ;; Hide the mode line of the Embark live/completions buffers
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                 nil
+                 (window-parameters (mode-line-format . none)))))
+
+(with-eval-after-load 'embark
+  (keymap-set help-map "B" 'embark-bindings)
+  (keymap-set minibuffer-mode-map "C-." 'embark-act)
+  (keymap-global-set "M-." 'embark-dwim)) ;; Good replacement for `xref-find-definitions'
+
+(use-package embark-consult
+  :ensure t ; only need to install it, embark loads it after consult if found
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
+
+
 (provide 'init-completions)
 ;;; init-completions.el ends here
