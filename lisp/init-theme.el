@@ -33,9 +33,6 @@
   (setq modus-themes-mixed-fonts t)
   ;; (setq modus-vivendi-palette-overrides
   ;;       '((bg-main "#222222")))
-  (setq modus-themes-common-palette-overrides
-        '((fg-heading-1 blue-warmer)
-          (fg-heading-3 fg-alt)))
   (setq modus-themes-headings
         '((0 . (variable-pitch 1.8))
           (1 . (1.5))
