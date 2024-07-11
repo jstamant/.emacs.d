@@ -200,6 +200,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-javascript)
 (require 'init-prettier)
 (require 'init-vue)
+(require 'init-rust)
 
 (require 'init-nix)
 
