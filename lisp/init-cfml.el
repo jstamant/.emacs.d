@@ -4,7 +4,9 @@
 
 
 (use-package cfml-mode
-  :ensure t)
+  :ensure t
+  :mode (("\\.cfc\\'" . cfscript-mode)
+         ("\\.cfm\\'" . cfscript-mode)))
 
 (with-eval-after-load 'apheleia
   ;; For some reason, running box fmt without --overwrite adds an
