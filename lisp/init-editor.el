@@ -8,7 +8,9 @@
 (use-package highlight-indent-guides
   :ensure t
   :diminish highlight-indent-guides-mode
-  :hook (prog-mode . highlight-indent-guides-mode)
+  ;; This package has terrible performance in files with lots of indentation,
+  ;; like in web-mode files
+  ;; :hook (prog-mode . highlight-indent-guides-mode)
   :init
   (setq highlight-indent-guides-method 'bitmap)
   (setq highlight-indent-guides-auto-character-face-perc 50))
