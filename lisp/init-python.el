@@ -5,9 +5,11 @@
 
 (use-package python
   :ensure t
-  :defer t
-  :init
-  (setq python-indent-offset 4))
+  :defer t)
+
+(setq python-indent-offset 4)
+
+(add-hook 'python-mode-hook 'lsp-deferred)
 
 
 (provide 'init-python)

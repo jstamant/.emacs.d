@@ -14,7 +14,6 @@
   :ensure t
   :commands (lsp lsp-deferred)
   :hook
-  (python-mode . lsp-deferred)
   (lsp-mode . lsp-enable-which-key-integration)
   :init
   (setq lsp-auto-execute-action nil) ;; Do not auto-execute single actions
