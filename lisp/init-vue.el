@@ -7,14 +7,17 @@
 ;;; Code:
 
 
-(with-eval-after-load 'web-mode
-  (define-derived-mode vue-mode web-mode "Vue")
-  (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode)))
+(use-package web-mode :ensure t)
 
+(autoload 'web-mode "web-mode")
+(define-derived-mode vue-mode web-mode "Vue")
 
-;; Polymode splits the buffer into different modes, so this doesn't really work
-;; (with-eval-after-load 'apheleia
-;;   (add-to-list 'apheleia-mode-alist '(vue-mode . prettier-javascript)))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+
+(add-hook 'vue-mode-hook 'lsp-deferred)
+
+(with-eval-after-load 'apheleia
+  (add-to-list 'apheleia-mode-alist '(vue-mode . prettier-javascript)))
 
 
 (provide 'init-vue)
