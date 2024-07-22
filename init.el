@@ -131,8 +131,6 @@ This is great for when you're tinkering on your `user-init-file'"
 (use-package calc
   :bind ("C-x c" . calc))
 
-(require 'init-c)
-
 (require 'init-dired)
 
 ;;;; EMOJIFY SETTINGS
@@ -158,12 +156,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-spelling)
 (require 'init-ledger)
 
-(use-package yaml-mode
-  :ensure t
-  :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
-
 (require 'init-git)
-(require 'init-org)
 
 ;;;; PKGBUILD SETTINGS
 (use-package pkgbuild-mode
@@ -193,55 +186,34 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-projectile)
 
 (require 'init-lsp)
+(require 'init-formatter)
 
 (require 'init-tree-sitter)
 
+;;; Languages
+
+(require 'init-c)
 (require 'init-cfml)
 (require 'init-javascript)
-(require 'init-vue)
-(require 'init-rust)
-
-(require 'init-nix)
-
-(require 'init-formatter)
-
-;; I don't find this package useful yet?
-;; Don't forget to use M-; for comment-dwim
-;; (use-package evil-nerd-commenter
-;;   :after evil
-;;   :bind ("M-/" . evilnc-comment-or-uncomment-lines))
-
-
-;; Unsure if unfill works with comments of other programming languages
-;; And how exactly is this being deferred?
-;; (use-package unfill
-;;   :defer t
-;;   :commands (unfill-region unfill-paragraph unfill-toggle)
-;;   :init
-;;   (global-set-key [remap fill-paragraph] #'unfill-toggle))
-
-(require 'init-python)
-(require 'init-mermaid)
-
-;; Packages that don't have any configuration
+(use-package json-mode :ensure t :mode "\\.json\\'" :init (setq js-indent-level 2))
 (use-package lua-mode :ensure t)
 (use-package markdown-mode :ensure t)
-(use-package vimrc-mode
-  :ensure t
-  :mode "\\.vim\\(rc\\)?\\'")
+(require 'init-mermaid)
+(require 'init-nix)
+(require 'init-org)
+(require 'init-python)
+(require 'init-rust)
+(use-package vimrc-mode :ensure t :mode "\\.vim\\(rc\\)?\\'")
+(require 'init-vue)
+(use-package yaml-mode :ensure t :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
 
-(use-package json-mode
-  :ensure t
-  :mode "\\.json\\'"
-  :init
-  (setq js-indent-level 2))
+;;; Packages that have little-to-no configuration
 
 (use-package keyfreq
   :ensure t
   :config
   (keyfreq-mode 1)
   (keyfreq-autosave-mode 1))
-
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
