@@ -1,13 +1,21 @@
 ;;; init-nix.el --- Mode settings for nix files -*- lexical-binding: t -*-
 ;;; Commentary:
-
-;; All of this configuration was copied from nix-mode's github page
-
 ;;; Code:
 
 
+;; https://github.com/oxalica/nil
+(use-package lsp-nix
+  :ensure lsp-mode
+  :after (lsp-mode)
+  :demand t
+  :custom
+  (lsp-nix-nil-formatter ["nixpkgs-fmt"]))
+
 (use-package nix-mode
   :mode ("\\.nix\\'" "\\.nix.in\\'"))
+
+(add-hook 'nix-mode-hook 'lsp-deferred)
+
 (use-package nix-drv-mode
   :ensure nix-mode
   :mode "\\.drv\\'")
