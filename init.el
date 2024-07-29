@@ -28,10 +28,7 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (require 'init-package)
 
-
-(require 'init-modal)
 (require 'init-keybindings)
-;; (require 'init-meow)
 ;; (require 'init-evil)
 ;; (use-package expand-region :ensure t
 ;;   :bind '("C-\\" er/expand-region))
