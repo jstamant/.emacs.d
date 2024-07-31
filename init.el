@@ -30,8 +30,6 @@
 
 (require 'init-keybindings)
 ;; (require 'init-evil)
-;; (use-package expand-region :ensure t
-;;   :bind '("C-\\" er/expand-region))
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
 (setq user-full-name "Justin St-Amant")
@@ -130,25 +128,12 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-dired)
 
-;;;; EMOJIFY SETTINGS
-;; Not sure if I like this mode.
-;; (use-package emojify
-;;   :hook (after-init . global-emojify-mode)
-;;   :init
-;;   (setq emojify-display-style 'image) ; Or can be set to 'unicode
-;;   (setq emojify-emoji-styles '(unicode github))) ; Don't display ascii emojis
-
-
 (require 'init-completions)
 (require 'init-capf)
 (require 'init-files)
 (require 'init-buffers)
 (require 'init-windows)
 (require 'init-mc)
-
-;;;; FLYSPELL SETTINGS
-;; (use-package flyspell
-;;   :hook (text-mode . flyspell-mode)) ; Start spell checking on all modes derived from text-mode
 
 (require 'init-spelling)
 (require 'init-ledger)
