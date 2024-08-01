@@ -20,6 +20,10 @@
   "gg" 'magit
   "gs" 'magit-status)
 
+(general-spc
+  "g" 'magit-status)
+
+
 ;; Highlight changes in the fringe, and navigate and/or stage them
 ;; https://github.com/dgutov/diff-hl
 (use-package diff-hl

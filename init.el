@@ -29,7 +29,7 @@
 (require 'init-package)
 
 (require 'init-keybindings)
-;; (require 'init-evil)
+(require 'init-evil)
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
 (setq user-full-name "Justin St-Amant")

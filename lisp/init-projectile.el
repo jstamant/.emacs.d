@@ -21,6 +21,8 @@
 
 (jrs/emacs-extended-keys
   "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
+(general-spc
+  "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
 
 ;; Need these to perform ag and ripgrep searches using projectile
 (use-package ag

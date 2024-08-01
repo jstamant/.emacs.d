@@ -11,8 +11,11 @@
   "bk" 'kill-this-buffer)
 
 (jrs/emacs-extended-keys
- "k" 'kill-this-buffer)
+  "k" 'kill-this-buffer)
 
+(general-spc
+  "b" 'switch-to-buffer
+  "k" 'kill-this-buffer)
 
 (provide 'init-buffers)
 ;;; init-buffers.el ends here

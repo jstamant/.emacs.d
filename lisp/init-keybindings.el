@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-
+;; https://github.com/noctuid/general.el
 (use-package general :ensure t)
 
 
@@ -27,6 +27,11 @@
   :prefix "C-x")
 (jrs/emacs-extended-keys
   "" '(:keymap ctl-x-map :which-key "extended commands"))
+
+
+(general-create-definer general-spc
+  :states 'normal
+  :prefix "SPC")
 
 
 (provide 'init-keybindings)
