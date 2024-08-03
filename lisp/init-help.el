@@ -16,11 +16,8 @@
               ("V" . scroll-down-command)
               ("C-d" . scroll-up-command)))
 
-(jrs/emacs-leader-keys
-  "h" '(:ignore t :which-key "help")
-  "hd" '(:ignore t :which-key "describe")
-  "hdm" 'describe-mode)
-
+(jrs/emacs-leader-keys "h" '(:keymap help-map :package help :which-key "help"))
+(general-spc "h" '(:keymap help-map :package help :which-key "help"))
 
 ;; Helpful provides us with a help-mode that shows prettier and better organized
 ;; help content than the default help-mode

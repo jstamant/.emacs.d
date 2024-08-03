@@ -134,6 +134,7 @@ This command is usually invoked as an accident.\n")
            (file+olp+datetree "reference/journal.org") ""))))
 
 
+;; https://www.orgroam.com/manual.html
 (use-package org-roam
   :ensure t
   :init
@@ -147,6 +148,12 @@ This command is usually invoked as an accident.\n")
   "nf" 'org-roam-node-find
   "ni" 'org-roam-node-insert
   "nl" '(org-roam-buffer-toggle :which-key "links"))
+(general-spc
+  "r" '(:ignore t :which-key "roam")
+  "rc" 'org-roam-node-capture
+  "rf" 'org-roam-node-find
+  "ri" 'org-roam-node-insert
+  "rl" '("links" . org-roam-buffer-toggle))
 
 
 (provide 'init-org)

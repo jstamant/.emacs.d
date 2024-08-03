@@ -8,11 +8,13 @@
   :commands 'hydra-navigation/body)
 
 (jrs/emacs-extended-keys "M" 'hydra-navigation/body)
+(general-spc "n" 'hydra-navigation/body)
 
 (with-eval-after-load 'hydra
   (defhydra hydra-navigation ()
     "NAVIGATION MODE"
     ("d" scroll-up-command)
+    ("g" nil)
     ("h" backward-char)
     ("j" next-line)
     ("k" previous-line)
