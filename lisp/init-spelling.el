@@ -15,7 +15,7 @@
 
 (defalias 'fsm 'flyspell-mode)
 
-(jrs/add-toggle-keys "s" '(flyspell-mode :which-key "flyspell"))
+(keymap-set toggles-map "s" '("flyspell" . flyspell-mode))
 
 
 (provide 'init-spelling)

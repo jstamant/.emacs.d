@@ -6,7 +6,7 @@
 (use-package abbrev
   :diminish abbrev-mode)
 
-(jrs/add-toggle-keys "a" 'abbrev-mode)
+(keymap-set toggles-map "a" 'abbrev-mode)
 
 ;; Enable abbrev-mode everywhere by default
 (setq-default abbrev-mode t)

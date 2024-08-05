@@ -28,8 +28,8 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (require 'init-package)
 
-(require 'init-keybindings)
 (require 'init-evil)
+(require 'init-keybindings)
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
 (setq user-full-name "Justin St-Amant")

@@ -7,21 +7,21 @@
 
 ;;; Code:
 
+
+(defvar-keymap toggles-map
+  :doc "Keymap for keys that toggle minor-modes and options.")
+
+
 ;; https://github.com/noctuid/general.el
 (use-package general :ensure t)
 
+(general-auto-unbind-keys)
 
 (general-create-definer jrs/emacs-leader-keys
   :prefix "C-c")
 (jrs/emacs-leader-keys
-  "" '(:keymap mode-specific-map :which-key "<leader>"))
-
-
-(general-create-definer jrs/add-toggle-keys
-  :prefix "C-c t")
-(jrs/add-toggle-keys
- "" '(:ignore t :which-key "toggles"))
-
+  "" '(:keymap mode-specific-map :which-key "<leader>")
+  "t" '(:keymap toggles-map :which-key "toggles"))
 
 (general-create-definer jrs/emacs-extended-keys
   :prefix "C-x")
@@ -30,9 +30,9 @@
 
 
 (general-create-definer general-spc
-  :states 'normal
+  :states '(normal motion visual)
   :prefix "SPC")
-
+(general-spc "t" '(:keymap toggles-map :which-key "toggles"))
 
 (provide 'init-keybindings)
 ;;; init-keybindings.el ends here

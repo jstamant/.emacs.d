@@ -85,11 +85,10 @@
 (use-package paren)
 
 
-(jrs/add-toggle-keys
-  "p" '(show-paren-local-mode :which-key "paren")
-  "C-p" '(show-paren-mode :which-key "global paren")
-  "t" '(consult-theme :which-key "theme")
-  "T" 'toggle-theme)
+(keymap-set toggles-map "p" '("paren" . show-paren-local-mode))
+(keymap-set toggles-map "C-p" '("global paren" . show-paren-mode))
+(keymap-set toggles-map "t" '("theme" . consult-theme))
+(keymap-set toggles-map "T" 'toggle-theme)
 
 
 (provide 'init-theme)
