@@ -3,6 +3,9 @@
 ;;; Code:
 
 
+;; Use trash instead of destroying files
+(setq delete-by-moving-to-trash t)
+
 (recentf-mode)
 (setq recentf-max-saved-items 50)
 

@@ -3,6 +3,9 @@
 ;;; Code:
 
 
+;; Keep point position on screen when scrolling
+(setq scroll-preserve-screen-position t)
+
 (use-package hydra
   :ensure t
   :commands 'hydra-navigation/body)

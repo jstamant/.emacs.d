@@ -76,19 +76,13 @@ This is great for when you're tinkering on your `user-init-file'"
   (interactive)
   (load user-init-file))
 
-;; Enable some pre-disabled commands
-;; (put 'downcase-region 'disabled nil)
-;; (put 'upcase-region 'disabled nil)
-;; (put 'scroll-left 'disabled nil)
-;; (put 'narrow-to-region 'disabled nil)
-
 ;; Set backup and auto-save file location
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*"   ,temporary-file-directory t)))
 
-;; Remove the default GNU startup message. You can change it if you want.
+;; Remove the default GNU startup message
 (put 'inhibit-startup-echo-area-message 'saved-value t)
 (setq inhibit-startup-echo-area-message (user-login-name))
 
@@ -105,9 +99,6 @@ This is great for when you're tinkering on your `user-init-file'"
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-;; Miscellaneous settings
-(setq scroll-preserve-screen-position t) ; Keep point position on screen when scrolling
-
 (use-package command-log-mode :ensure t)
 
 (require 'init-theme)
@@ -116,8 +107,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-editor)
 (require 'init-navigation)
-
-(setq delete-by-moving-to-trash t) ; Use trash instead of destroying files
 
 (require 'init-abbrev)
 (require 'init-flymake)
