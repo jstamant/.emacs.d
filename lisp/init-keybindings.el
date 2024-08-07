@@ -34,5 +34,6 @@
   :prefix "SPC")
 (general-spc "t" '(:keymap toggles-map :which-key "toggles"))
 
+
 (provide 'init-keybindings)
 ;;; init-keybindings.el ends here
