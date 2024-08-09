@@ -10,8 +10,7 @@
   "bd" 'kill-this-buffer
   "bk" 'kill-this-buffer)
 
-(jrs/emacs-extended-keys
-  "k" 'kill-this-buffer)
+(keymap-set ctl-x-map "k" 'kill-this-buffer)
 
 (general-spc
   "b" 'switch-to-buffer

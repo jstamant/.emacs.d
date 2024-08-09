@@ -12,8 +12,7 @@
   :config
   (setq magit-diff-refine-hunk 'all))
 
-(jrs/emacs-extended-keys
-  "g" 'magit-status)
+(keymap-set ctl-x-map "g" 'magit-status)
 
 (jrs/emacs-leader-keys
   "g" '(:ignore t :which-key "git")

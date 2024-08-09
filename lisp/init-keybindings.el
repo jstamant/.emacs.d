@@ -23,11 +23,6 @@
   "" '(:keymap mode-specific-map :which-key "<leader>")
   "t" '(:keymap toggles-map :which-key "toggles"))
 
-(general-create-definer jrs/emacs-extended-keys
-  :prefix "C-x")
-(jrs/emacs-extended-keys
-  "" '(:keymap ctl-x-map :which-key "extended commands"))
-
 
 (general-create-definer general-spc
   :states '(normal motion visual)

@@ -10,7 +10,7 @@
   :ensure t
   :commands 'hydra-navigation/body)
 
-(jrs/emacs-extended-keys "M" 'hydra-navigation/body)
+(keymap-set ctl-x-map "M" 'hydra-navigation/body)
 (general-spc "n" 'hydra-navigation/body)
 
 (with-eval-after-load 'hydra

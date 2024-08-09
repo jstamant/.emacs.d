@@ -11,7 +11,7 @@
   :ensure t
   :commands 'hydra-mc/body)
 
-(jrs/emacs-extended-keys "m" 'hydra-mc/body)
+(keymap-set ctl-x-map "m" 'hydra-mc/body)
 
 (with-eval-after-load 'hydra
   (defhydra hydra-mc ()

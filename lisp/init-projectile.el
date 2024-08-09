@@ -19,8 +19,7 @@
   :config
   (projectile-mode 1))
 
-(jrs/emacs-extended-keys
-  "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
+(keymap-set ctl-x-map "p" '("projectile" . projectile-command-map))
 (general-spc
   "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
 
