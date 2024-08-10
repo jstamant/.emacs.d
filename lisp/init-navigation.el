@@ -6,6 +6,11 @@
 ;; Keep point position on screen when scrolling
 (setq scroll-preserve-screen-position t)
 
+(keymap-set evil-motion-state-map "g h" 'evil-beginning-of-line)
+(keymap-set evil-motion-state-map "g l" 'evil-end-of-line)
+(keymap-set evil-motion-state-map "g m" 'evil-first-non-blank)
+(keymap-set evil-motion-state-map "g %" 'evil-percentage-of-line)
+
 (use-package hydra
   :ensure t
   :commands 'hydra-navigation/body)
