@@ -8,6 +8,9 @@
 ;;; Code:
 
 
+;; Remove the annoying suggestions for command abbreviations
+(setq extended-command-suggest-shorter nil)
+
 (defvar-keymap toggles-map
   :doc "Keymap for keys that toggle minor-modes and options.")
 
