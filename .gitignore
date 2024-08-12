@@ -11,6 +11,7 @@ transient
 tree-sitter/
 
 # Package management directories
+eln-cache/
 elpa/
 straight/
 
