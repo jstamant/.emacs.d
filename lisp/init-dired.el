@@ -3,15 +3,14 @@
 ;;; Code:
 
 
-(use-package dired
-  :init
-  (when (eq system-type 'darwin)
-    (setq ls-lisp-use-insert-directory-program nil)) ;; Uses ls-lisp to prevent errors on Mac
-  :config
+(with-eval-after-load 'dired
   (put 'dired-find-alternate-file 'disabled nil)
-  :bind (:map dired-mode-map
-              ("C-s" . dired-isearch-filenames)
-              ("TAB" . dired-find-file)))
+  (keymap-set dired-mode-map "C-s" 'dired-isearch-filenames)
+  (keymap-set dired-mode-map "TAB" 'dired-find-file))
+
+;; Uses ls-lisp to prevent errors on Mac
+(when (eq system-type 'darwin)
+  (setq ls-lisp-use-insert-directory-program nil))
 
 
 (provide 'init-dired)
