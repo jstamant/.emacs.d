@@ -6,6 +6,12 @@
 ;; Use trash instead of destroying files
 (setq delete-by-moving-to-trash t)
 
+;; Set backup and auto-save file location
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*"   ,temporary-file-directory t)))
+
 (recentf-mode)
 (setq recentf-max-saved-items 50)
 
