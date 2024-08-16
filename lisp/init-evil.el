@@ -30,22 +30,18 @@
   (evil-scroll-down 0)
   (evil-scroll-line-to-center nil))
 
-;; (use-package evil-surround
-;;   :ensure t
-;;   :config
-;;   (global-evil-surround-mode 1))
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode))
 
-; Used for better default keybinds in Emacs modes
+;; Used for better default keybinds in Emacs modes
 ;; (use-package evil-collection
 ;;   :ensure t
 ;;   :after evil
 ;;   :diminish evil-collection-unimpaired-mode
 ;;   :config
 ;;   (evil-collection-init))
-
-;; Might be cool to implement - keybindings to inc/dec numbers quickly
-;; (use-package evil-numbers
-;;   :ensure t)
 
 ;; (use-package evil-org ; Provides evil keybinds for org-mode
 ;;   :ensure t
