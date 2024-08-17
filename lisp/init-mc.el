@@ -5,6 +5,8 @@
 
 (use-package multiple-cursors
   :ensure t)
+(use-package evil-mc
+  :ensure t)
 
 
 (use-package hydra
