@@ -29,6 +29,7 @@
 
 (general-create-definer general-spc
   :states '(normal motion visual)
+  :keymaps 'override
   :prefix "SPC")
 (general-spc "t" '(:keymap toggles-map :which-key "toggles"))
 

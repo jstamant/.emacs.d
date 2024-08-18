@@ -11,8 +11,8 @@
   (setq evil-want-C-u-delete t)
   (setq evil-want-C-i-jump nil)
   (setq evil-want-Y-yank-to-eol t)
-  ;; (setq evil-want-integration t) ; required for evil-collection
-  ;; (setq evil-want-keybinding nil) ; required for evil-collection
+  (setq evil-want-integration t) ; required for evil-collection
+  (setq evil-want-keybinding nil) ; required for evil-collection
   :config
   ;;(evil-set-initial-state 'help-mode 'emacs)
   ;;(evil-set-initial-state 'dired-mode 'emacs)
@@ -36,12 +36,12 @@
   (global-evil-surround-mode))
 
 ;; Used for better default keybinds in Emacs modes
-;; (use-package evil-collection
-;;   :ensure t
-;;   :after evil
-;;   :diminish evil-collection-unimpaired-mode
-;;   :config
-;;   (evil-collection-init))
+(use-package evil-collection
+  :ensure t
+  :after evil
+  :diminish evil-collection-unimpaired-mode
+  :config
+  (evil-collection-init))
 
 ;; (use-package evil-org ; Provides evil keybinds for org-mode
 ;;   :ensure t
