@@ -26,7 +26,7 @@
 ;; Bootstrap config
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
-(require 'init-package)
+(require 'init-package-manager)
 
 (require 'init-evil)
 (require 'init-keybindings)
