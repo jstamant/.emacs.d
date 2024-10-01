@@ -124,13 +124,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-git)
 
-;;;; SHELL-SCRIPT SETTINGS
-(use-package sh-script
-  :ensure t
-  :config
-  (setq sh-basic-offset 2)
-  (add-hook 'sh-mode-hook (lambda () (sh-set-shell "bash"))))
-
 ;;;; TERM SETTINGS
 (use-package term
   :ensure t)
@@ -164,6 +157,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-pkgbuild)
 (require 'init-python)
 (require 'init-rust)
+(require 'init-sh)
 (use-package toml-mode :ensure t)
 (use-package vimrc-mode :ensure t :mode "\\.vim\\(rc\\)?\\'")
 (require 'init-vue)
