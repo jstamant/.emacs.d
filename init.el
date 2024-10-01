@@ -143,6 +143,9 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-tree-sitter)
 
+;;; Tools
+(require 'init-keyfreq)
+
 ;;; Languages
 
 (require 'init-c)
@@ -163,13 +166,6 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-vue)
 (require 'init-yaml)
 
-;;; Packages that have little-to-no configuration
-
-(use-package keyfreq
-  :ensure t
-  :config
-  (keyfreq-mode 1)
-  (keyfreq-autosave-mode 1))
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
