@@ -17,6 +17,8 @@
 ;;; Code:
 
 
+(setq js-indent-level 2)
+
 (use-package typescript-ts-mode
   :ensure t
   :mode (("\\.tsx?\\'" . tsx-ts-mode)

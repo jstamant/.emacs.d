@@ -148,7 +148,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-c)
 (require 'init-cfml)
 (require 'init-javascript)
-(use-package json-mode :ensure t :mode "\\.json\\'" :init (setq js-indent-level 2))
+(require 'init-json)
 (require 'init-lua)
 (require 'init-markdown)
 (require 'init-mermaid)
