@@ -124,12 +124,6 @@ This is great for when you're tinkering on your `user-init-file'"
 
 (require 'init-git)
 
-;;;; PKGBUILD SETTINGS
-(use-package pkgbuild-mode
-  :ensure t
-  :config
-  (setq pkgbuild-update-sums-on-save nil))
-
 ;;;; SHELL-SCRIPT SETTINGS
 (use-package sh-script
   :ensure t
@@ -167,6 +161,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-mermaid)
 (require 'init-nix)
 (require 'init-org)
+(require 'init-pkgbuild)
 (require 'init-python)
 (require 'init-rust)
 (use-package toml-mode :ensure t)
