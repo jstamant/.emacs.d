@@ -93,65 +93,57 @@ This is great for when you're tinkering on your `user-init-file'"
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-;; Package to show key-presses in a *command-log* buffer
-;; https://github.com/lewang/command-log-mode
-(use-package command-log-mode :ensure t)
-
-;; UI/theme
-(require 'init-theme)
-(require 'init-modeline)
-
+;;; Editor
+(require 'init-capf)
+(require 'init-completions)
 (require 'init-editor)
+(require 'init-mc)
 (require 'init-navigation)
 
-(require 'init-abbrev)
-(require 'init-flymake)
-
-(keymap-set ctl-x-map "c" 'calc)
-(general-spc "xc" 'calc)
-
-(require 'init-dired)
-
-(require 'init-completions)
-(require 'init-capf)
+;;; Window management
 (require 'init-files)
 (require 'init-buffers)
 (require 'init-windows)
-(require 'init-mc)
 
+;;; UI
+(require 'init-theme)
+(require 'init-modeline)
+
+;;; Checkers
+(require 'init-syntax)
 (require 'init-spelling)
-(require 'init-ledger)
 
-(require 'init-git)
-
-;;;; TERM SETTINGS
-(use-package term
-  :ensure t)
-
+;;; Emacs built-in packages
+(keymap-set ctl-x-map "c" 'calc)
+(general-spc "xc" 'calc)
+(require 'init-abbrev)
+(require 'init-dired)
+(require 'init-help)
 ;;;; VIEW MODE
 (use-package view
   :bind ("C-x v" . view-mode))
 
-(require 'init-web)
-
-(require 'init-help)
-(require 'init-lisp)
-(require 'init-projectile)
-
-(require 'init-lsp)
-(require 'init-formatter)
-
-(require 'init-tree-sitter)
-
 ;;; Tools
+;; Package to show key-presses in a *command-log* buffer
+;; https://github.com/lewang/command-log-mode
+(use-package command-log-mode :ensure t)
+(require 'init-formatter)
+(require 'init-git)
 (require 'init-keyfreq)
+(require 'init-lsp)
+(require 'init-projectile)
+(require 'init-tree-sitter)
+;;;; TERM SETTINGS
+(use-package term
+  :ensure t)
 
 ;;; Languages
-
 (require 'init-c)
 (require 'init-cfml)
 (require 'init-javascript)
 (require 'init-json)
+(require 'init-ledger)
+(require 'init-lisp)
 (require 'init-lua)
 (require 'init-markdown)
 (require 'init-mermaid)
@@ -164,6 +156,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-toml)
 (require 'init-vimrc)
 (require 'init-vue)
+(require 'init-web)
 (require 'init-yaml)
 
 

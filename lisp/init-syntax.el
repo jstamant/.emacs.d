@@ -1,4 +1,4 @@
-;;; init-flymake.el --- Flymake checking config -*- lexical-binding: t -*-
+;;; init-syntax.el --- Syntax-checking via flymake -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;; If you run into issues with Flymake, then maybe Flycheck may be a
@@ -21,5 +21,5 @@
     "!P" 'flymake-show-project-diagnostics))
 
 
-(provide 'init-flymake)
-;;; init-flymake.el ends here
+(provide 'init-syntax)
+;;; init-syntax.el ends here
