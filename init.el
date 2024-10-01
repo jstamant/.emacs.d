@@ -161,7 +161,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-toml)
 (require 'init-vimrc)
 (require 'init-vue)
-(use-package yaml-mode :ensure t :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
+(require 'init-yaml)
 
 ;;; Packages that have little-to-no configuration
 
