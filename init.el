@@ -97,9 +97,9 @@ This is great for when you're tinkering on your `user-init-file'"
 ;; https://github.com/lewang/command-log-mode
 (use-package command-log-mode :ensure t)
 
+;; UI/theme
 (require 'init-theme)
 (require 'init-modeline)
-(require 'init-dashboard)
 
 (require 'init-editor)
 (require 'init-navigation)
