@@ -159,7 +159,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-rust)
 (require 'init-sh)
 (require 'init-toml)
-(use-package vimrc-mode :ensure t :mode "\\.vim\\(rc\\)?\\'")
+(require 'init-vimrc)
 (require 'init-vue)
 (use-package yaml-mode :ensure t :mode ("\\.\\(yml\\|yaml\\)\\'" . yaml-mode))
 
