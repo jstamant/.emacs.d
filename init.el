@@ -150,7 +150,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-javascript)
 (use-package json-mode :ensure t :mode "\\.json\\'" :init (setq js-indent-level 2))
 (use-package lua-mode :ensure t)
-(use-package markdown-mode :ensure t)
+(require 'init-markdown)
 (require 'init-mermaid)
 (require 'init-nix)
 (require 'init-org)
