@@ -51,6 +51,8 @@
 ;;   (require 'evil-org-agenda)
 ;;   (evil-org-agenda-set-keys))
 
+(general-spc "u" 'universal-argument)
+
 
 (provide 'init-evil)
 ;;; init-evil.el ends here
