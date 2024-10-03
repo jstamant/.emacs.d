@@ -21,8 +21,9 @@
   (setq lsp-enable-indentation nil)
   (setq lsp-enable-snippet nil)
   (setq lsp-enable-symbol-highlighting nil)
-  (setq lsp-keymap-prefix "C-c l")
+  (setq lsp-keymap-prefix "C-c l") ;; Sets the keybind in lsp-mode-map
   :config
+  (general-spc :keymap 'lsp-mode-map "l" (cons "lsp" lsp-command-map))
   ;; (add-to-list 'lsp--formatting-indent-alist '(tsx-ts-mode . typescript-indent-level))
   )
 
