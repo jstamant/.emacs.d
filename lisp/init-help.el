@@ -19,19 +19,18 @@
 (jrs/emacs-leader-keys "h" '(:keymap help-map :package help :which-key "help"))
 (general-spc "h" '(:keymap help-map :package help :which-key "help"))
 
-;; Helpful provides us with a help-mode that shows prettier and better organized
-;; help content than the default help-mode
-;; I don't like its navigation, though. It doesn't reuse the same window
-;; (use-package helpful)
-;; (use-package helpful
-;;   :custom
-;;   (counsel-describe-function-function #'helpful-callable)
-;;   (counsel-describe-variable-function #'helpful-variable)
-;;   :bind
-;;   ([remap describe-function] . counsel-describe-function)
-;;   ([remap describe-command] . helpful-command)
-;;   ([remap describe-variable] . counsel-describe-variable)
-;;   ([remap describe-key] . helpful-key))
+
+;; Beautiful help buffers
+;; https://github.com/Wilfred/helpful
+(use-package helpful
+  :ensure t
+  ;; Seems to have autoloads on its commands
+  :defer t
+  :init
+  (keymap-set help-map "f" 'helpful-callable)
+  (keymap-set help-map "h" 'helpful-at-point)
+  (keymap-set help-map "k" 'helpful-key)
+  (keymap-set help-map "v" 'helpful-variable))
 
 
 (use-package eldoc
