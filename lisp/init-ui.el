@@ -20,6 +20,9 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+;; Answer `yes-or-no-p' yes/no questions with a single key instead of typing out
+(setq use-short-answers nil)
+
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
