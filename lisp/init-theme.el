@@ -54,12 +54,17 @@
   :init (global-page-break-lines-mode))
 
 
-;; Highlighting of certain TODO-like keywords
+;; Highlighting of certain keywords, see `hl-todo-keyword-faces'
 ;; https://github.com/tarsius/hl-todo
 (use-package hl-todo
   :ensure t
   :init
-  (global-hl-todo-mode))
+  (global-hl-todo-mode)
+  :config
+  (setq hl-todo-highlight-punctuation ":")
+  (add-to-list 'hl-todo-keyword-faces '("TODO" warning bold))
+  (add-to-list 'hl-todo-keyword-faces '("DEPRECATED" font-lock-doc-face bold))
+  (add-to-list 'hl-todo-keyword-faces '("NOTE" warning bold)))
 
 
 ;; Making links clickable and highlighted
