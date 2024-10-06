@@ -7,28 +7,20 @@
 (use-package evil
   :ensure t
   :init
+  ;; NOTE that most of these MUST be set before evil loads
   (setq evil-want-C-u-scroll t)
   (setq evil-want-C-u-delete nil)
   (setq evil-want-C-i-jump nil)
   (setq evil-want-Y-yank-to-eol t)
   (setq evil-want-integration t) ; required for evil-collection
   (setq evil-want-keybinding nil) ; required for evil-collection
+  (setq evil-undo-system 'undo-redo)
   :config
   ;; TODO Override C-v to scroll instead of activating visual block
   ;; I'd like to toggle the visual type with a key
   ;; (general-def 'normal "C-v" 'scroll-up-command)
   ;; (general-def 'visual "V" 'evil-visual-block)
   (evil-mode))
-
-(defun jrs/scroll-up ()
-  (interactive)
-  (evil-scroll-up 0)
-  (evil-scroll-line-to-center nil))
-
-(defun jrs/scroll-down ()
-  (interactive)
-  (evil-scroll-down 0)
-  (evil-scroll-line-to-center nil))
 
 (use-package evil-surround
   :ensure t
