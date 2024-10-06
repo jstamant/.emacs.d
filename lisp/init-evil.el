@@ -24,6 +24,7 @@
 
 (use-package evil-surround
   :ensure t
+  :after evil
   :config
   (global-evil-surround-mode))
 
@@ -35,13 +36,25 @@
   :config
   (evil-collection-init))
 
-;; (use-package evil-org ; Provides evil keybinds for org-mode
-;;   :ensure t
-;;   :after org
-;;   :hook (org-mode . (lambda () evil-org-mode))
-;;   :config
-;;   (require 'evil-org-agenda)
-;;   (evil-org-agenda-set-keys))
+;; https://github.com/redguardtoo/evil-nerd-commenter
+(use-package evil-nerd-commenter
+  :ensure t
+  :after evil
+  :init
+  (setq evilnc-comment-text-object ";")
+  (keymap-set evil-inner-text-objects-map evilnc-comment-text-object 'evilnc-inner-commenter)
+  (keymap-set evil-outer-text-objects-map evilnc-comment-text-object 'evilnc-outer-commenter)
+  :config
+  (keymap-set global-map "M-;" 'evilnc-comment-or-uncomment-lines)
+  (general-spc
+    ";" '(:ignore t :which-key "comment")
+    "; ;" 'evilnc-comment-or-uncomment-lines
+    "; c" 'evilnc-copy-and-comment-lines
+    "; i" 'evilnc-toggle-invert-comment-line-by-line
+    "; s" 'evilnc-comment-box
+    "; t" 'evilnc-comment-or-uncomment-html-tag
+    "; v" 'evilnc-toggle-comment-empty-lines
+    "; y" 'evilnc-comment-and-kill-ring-save))
 
 (general-spc "u" 'universal-argument)
 
