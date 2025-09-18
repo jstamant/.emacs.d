@@ -61,6 +61,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; VIEW MODE
 (use-package view
   :bind ("C-x v" . view-mode))
+(setq view-read-only t) ;; Visit read-only buffers in view-mode by default
 
 ;;; Tools
 ;; Package to show key-presses in a *command-log* buffer
