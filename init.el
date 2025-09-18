@@ -63,6 +63,9 @@ This is great for when you're tinkering on your `user-init-file'"
   :bind ("C-x v" . view-mode))
 (setq view-read-only t) ;; Visit read-only buffers in view-mode by default
 
+;;;; MAN MODE
+(keymap-set help-map "M" 'man)
+
 ;;; Tools
 ;; Package to show key-presses in a *command-log* buffer
 ;; https://github.com/lewang/command-log-mode
