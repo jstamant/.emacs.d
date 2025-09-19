@@ -15,7 +15,7 @@
 (require 'init-package-manager)
 
 (require 'init-keybindings)
-(require 'init-evil)
+;;(require 'init-evil)
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
 (require 'init-environment)
