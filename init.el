@@ -113,6 +113,10 @@ This is great for when you're tinkering on your `user-init-file'"
   (add-to-list 'grep-find-ignored-directories ".cache"))
 (add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
 
+;;;; Electric pairs
+(electric-pair-mode 1)
+(keymap-set toggles-map "P" 'electric-pair-mode)
+
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
