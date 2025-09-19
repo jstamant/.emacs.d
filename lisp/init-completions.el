@@ -50,6 +50,7 @@
 (use-package consult :ensure t)
 
 
+;; TODO embark doesn't really belong here, but is used by completions...
 ;; Embark is for context-sensitive minibuffer actions
 ;; https://github.com/oantolin/embark
 (use-package embark
@@ -63,7 +64,9 @@
 
 (with-eval-after-load 'embark
   (keymap-set help-map "B" 'embark-bindings)
-  (keymap-set minibuffer-mode-map "C-." 'embark-act)
+  ;; TODO make a decision on embark-act's binding?
+  ;; (keymap-set minibuffer-mode-map "C-." 'embark-act)
+  (keymap-global-set "C-." 'embark-act)
   (keymap-global-set "M-." 'embark-dwim)) ;; Good replacement for `xref-find-definitions'
 
 (use-package embark-consult
