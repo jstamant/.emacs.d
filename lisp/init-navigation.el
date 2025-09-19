@@ -48,7 +48,8 @@ See `jrs/scroll-down-half'."
 
 (use-package avy
   :ensure t
-  :bind ("C-\\" . avy-goto-char-timer)
+  :bind (("C-\\" . avy-goto-char-timer)
+         ("M-\\" . avy-goto-line))
   :init
   (general-def 'motion "gsj" 'avy-goto-line-below)
   (general-def 'motion "gsk" 'avy-goto-line-above)
