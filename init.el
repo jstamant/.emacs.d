@@ -102,6 +102,9 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-web)
 (require 'init-yaml)
 
+;;;; search settings
+(setq isearch-lazy-count t) ; show number of search hits in the search prompt
+
 
 ;; Finally, load variables configured from the 'customize' interface
 (when (file-exists-p custom-file)
