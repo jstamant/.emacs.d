@@ -7,6 +7,7 @@
   :ensure t
   :defer t
   :diminish projectile-mode
+  :bind-keymap ("C-x p" . projectile-command-map)
   :init
   (let ((directory (cond ((eq system-type 'gnu/linux)
                           "~/programming")
@@ -19,7 +20,6 @@
   :config
   (projectile-mode 1))
 
-(keymap-set ctl-x-map "p" '("projectile" . projectile-command-map))
 (general-spc
   "p" '(:keymap projectile-command-map :package projectile :which-key "projectile"))
 
