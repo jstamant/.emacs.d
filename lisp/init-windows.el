@@ -36,6 +36,10 @@
 
 (keymap-set global-map "M-o" 'other-window)
 
+(use-package ace-window
+  :ensure t)
+(keymap-set global-map "M-O" 'ace-window)
+
 
 (provide 'init-windows)
 ;;; init-windows.el ends here
