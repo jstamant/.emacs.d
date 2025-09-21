@@ -134,6 +134,7 @@ This command is usually invoked as an accident.\n")
            (file+olp+datetree "reference/journal.org") ""))))
 
 
+;; TODO move roam into its own module
 ;; https://www.orgroam.com/manual.html
 (use-package org-roam
   :ensure t
@@ -147,7 +148,8 @@ This command is usually invoked as an accident.\n")
   "nc" 'org-roam-node-capture
   "nf" 'org-roam-node-find
   "ni" 'org-roam-node-insert
-  "nl" '(org-roam-buffer-toggle :which-key "links"))
+  "nl" '(org-roam-buffer-toggle :which-key "links")
+  "ns" 'org-roam-db-sync)
 (general-spc
   "r" '(:ignore t :which-key "roam")
   "rc" 'org-roam-node-capture
