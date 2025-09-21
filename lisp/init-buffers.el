@@ -2,6 +2,12 @@
 ;;; Commentary:
 ;;; Code:
 
+
+;; Do not confirm when killing a buffer with running process, just do it
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function
+            kill-buffer-query-functions))
+
 ;; TODO remove this?
 ;; (jrs/emacs-leader-keys
 ;;   "b" '(:ignore t :which-key "buffers")

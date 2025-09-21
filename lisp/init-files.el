@@ -12,6 +12,9 @@
 (setq auto-save-file-name-transforms
       `((".*"   ,temporary-file-directory t)))
 
+;; Removes yet another prompt annoying prompt
+(setq confirm-nonexistent-file-or-buffer nil)
+
 (recentf-mode)
 (setq recentf-max-saved-items 50)
 
