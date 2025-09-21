@@ -145,9 +145,11 @@ This command is usually invoked as an accident.\n")
 
 (jrs/emacs-leader-keys
   "n" '(:ignore t :which-key "org-roam node")
+  "na" 'org-roam-alias-add
   "nc" 'org-roam-node-capture
   "nf" 'org-roam-node-find
   "ni" 'org-roam-node-insert
+  "nI" 'org-id-get-create
   "nl" '(org-roam-buffer-toggle :which-key "links")
   "ns" 'org-roam-db-sync)
 (general-spc
