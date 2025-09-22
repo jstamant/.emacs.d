@@ -83,6 +83,7 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;; Languages
 (require 'init-c)
 (require 'init-cfml)
+(require 'init-guile)
 (require 'init-javascript)
 (require 'init-json)
 (require 'init-ledger)
