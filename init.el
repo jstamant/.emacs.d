@@ -106,14 +106,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; search settings
 (setq isearch-lazy-count t) ; show number of search hits in the search prompt
 
-;;;; grep settings
-(with-eval-after-load 'grep
-  ; found in .emacs.d
-  (add-to-list 'grep-find-ignored-directories "eln-cache")
-  (add-to-list 'grep-find-ignored-directories "elpa")
-  (add-to-list 'grep-find-ignored-directories ".cache"))
-(add-hook 'grep-mode-hook (lambda () (toggle-truncate-lines 1)))
-
 ;;;; Electric pairs
 (electric-pair-mode 1)
 (keymap-set toggles-map "P" 'electric-pair-mode)
