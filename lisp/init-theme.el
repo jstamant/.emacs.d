@@ -21,6 +21,10 @@
 ;; Don't prompt to confirm theme safety
 (setq custom-safe-themes t)
 
+;; Set default font
+(add-to-list 'default-frame-alist
+             '(font . "DejaVu Sans Mono-11"))
+
 
 ;; Get a more recent version than what's included with Emacs
 ;; There are many customization options for Prot's themes
