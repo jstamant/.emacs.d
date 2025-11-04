@@ -11,6 +11,9 @@
 (keymap-set evil-motion-state-map "g m" 'evil-first-non-blank)
 (keymap-set evil-motion-state-map "g %" 'evil-percentage-of-line)
 
+(keymap-set search-map "g" 'projectile-grep)
+(keymap-set search-map "r" 'projectile-ripgrep)
+
 (use-package hydra
   :ensure t
   :commands 'hydra-navigation/body)
