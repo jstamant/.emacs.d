@@ -18,6 +18,12 @@
 (recentf-mode)
 (setq recentf-max-saved-items 50)
 
+(defun delete-this-file ()
+  "Deletes the file for the currently visited buffer."
+  (interactive)
+  (delete-file (f-this-file))
+  (kill-current-buffer))
+
 (defun sudo (filename)
   "Calls `find-file' with sudo privileges."
   (interactive "GSudo find-file: ")
