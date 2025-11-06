@@ -35,6 +35,8 @@ This command is usually invoked as an accident.\n")
   (defalias 'work 'org-cycle-agenda-files)
   (defalias 'w    'org-cycle-agenda-files)
 
+  (defalias 'org-link-open 'org-open-at-point) ; for findability
+
   ;; Settings for a clean view
   (setq org-adapt-indentation nil) ; Promotes and demotes headings like org used to
 
