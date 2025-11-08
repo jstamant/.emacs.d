@@ -18,6 +18,9 @@
 (use-package nerd-icons
   :ensure t)
 
+(keymap-set toggles-map "b" 'display-battery-mode)
+(keymap-set toggles-map "C-t" 'display-time-mode)
+
 
 (provide 'init-modeline)
 ;;; init-modeline.el ends here
