@@ -40,10 +40,10 @@
 ;; https://github.com/justbur/emacs-which-key
 (use-package which-key
   :ensure t
-  :init (which-key-mode)
   :diminish which-key-mode
-  :config
-  (setq which-key-idle-delay 1.0))
+  :init
+  (setq which-key-idle-delay 0.5)
+  (which-key-mode))
 
 
 (provide 'init-help)
