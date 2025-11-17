@@ -73,6 +73,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (use-package command-log-mode :ensure t)
 (require 'init-formatter)
 (require 'init-git)
+(use-package guix :ensure t)
 (require 'init-keyfreq)
 (require 'init-lsp)
 (require 'init-projectile)
