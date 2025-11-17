@@ -67,6 +67,7 @@ This is great for when you're tinkering on your `user-init-file'"
 (keymap-set help-map "M" 'man)
 
 ;;; Tools
+(use-package daemons :ensure t)
 ;; Package to show key-presses in a *command-log* buffer
 ;; https://github.com/lewang/command-log-mode
 (use-package command-log-mode :ensure t)
