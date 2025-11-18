@@ -7,6 +7,9 @@
 (put 'inhibit-startup-echo-area-message 'saved-value t)
 (setq inhibit-startup-echo-area-message (user-login-name))
 
+;; Remove the message "When done with this frame, type C-x 5 0"
+(setq server-client-instructions nil)
+
 ;; Start emacs maximized, WM doesn't seem to control the frame size initially
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (setq inhibit-startup-screen t) ; Disable the default Emacs startup screen
