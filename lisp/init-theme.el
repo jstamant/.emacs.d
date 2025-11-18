@@ -30,7 +30,7 @@
 ;; There are many customization options for Prot's themes
 ;; https://protesilaos.com/emacs/modus-themes
 (use-package modus-themes
-  :ensure t
+  :straight t
   :config
   (setq modus-themes-bold-constructs t)
   (setq modus-themes-italic-constructs nil)
@@ -53,7 +53,7 @@
 ;; C-q `quoted-insert' C-l
 ;; https://github.com/purcell/page-break-lines
 (use-package page-break-lines
-  :ensure t
+  :straight t
   :diminish page-break-lines-mode
   :init (global-page-break-lines-mode))
 
@@ -61,7 +61,7 @@
 ;; Highlighting of certain keywords, see `hl-todo-keyword-faces'
 ;; https://github.com/tarsius/hl-todo
 (use-package hl-todo
-  :ensure t
+  :straight t
   :init
   (global-hl-todo-mode)
   :config
@@ -86,7 +86,7 @@
 ;; Also identifies unmatched delimiters
 ;; https://github.com/Fanael/rainbow-delimiters
 (use-package rainbow-delimiters
-  :ensure t
+  :straight t
   :hook (prog-mode . rainbow-delimiters-mode))
 
 

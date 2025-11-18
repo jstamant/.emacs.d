@@ -15,6 +15,7 @@
 (require 'init-package-manager)
 
 (require 'init-keybindings)
+(require 'init-modal)
 ;;(require 'init-evil)
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
@@ -67,20 +68,20 @@ This is great for when you're tinkering on your `user-init-file'"
 (keymap-set help-map "M" 'man)
 
 ;;; Tools
-(use-package daemons :ensure t)
+(use-package daemons :straight t)
 ;; Package to show key-presses in a *command-log* buffer
 ;; https://github.com/lewang/command-log-mode
-(use-package command-log-mode :ensure t)
+(use-package command-log-mode :straight t)
 (require 'init-formatter)
 (require 'init-git)
-(use-package guix :ensure t)
+(use-package guix :straight t)
 (require 'init-keyfreq)
 (require 'init-lsp)
 (require 'init-projectile)
 (require 'init-tree-sitter)
 ;;;; TERM SETTINGS
 (use-package term
-  :ensure t)
+  :straight t)
 
 ;;; Languages
 (require 'init-c)

@@ -4,7 +4,7 @@
 
 
 (use-package toml-mode
-  :ensure t
+  :straight t
   ;; `auto-mode-alist' entry for `toml-mode' is autoloaded
   :defer t)
 

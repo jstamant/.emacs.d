@@ -4,7 +4,7 @@
 
 
 (use-package vimrc-mode
-  :ensure t
+  :straight t
   ;; `auto-mode-alist' entries for `vimrc-mode' are autoloaded
   :defer t)
 

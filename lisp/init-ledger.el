@@ -5,7 +5,7 @@
 ;;; Code:
 
 (use-package ledger-mode
-  :ensure t
+  :straight t
   :mode "\\.ledger\\'"
   :config
   (setq ledger-default-date-format ledger-iso-date-format) ; YYYY-MM-DD

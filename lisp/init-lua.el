@@ -4,7 +4,7 @@
 
 
 (use-package lua-mode
-  :ensure t
+  :straight t
   ;; `auto-mode-alist' entry for `lua-mode' is autoloaded
   :defer t)
 

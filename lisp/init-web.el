@@ -4,7 +4,7 @@
 
 
 (use-package web-mode
-  :ensure t
+  :straight t
   :mode
   "\\.css\\'"
   "\\.htaccess\\'"

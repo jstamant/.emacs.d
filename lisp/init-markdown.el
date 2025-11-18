@@ -4,7 +4,7 @@
 
 
 (use-package markdown-mode
-  :ensure t
+  :straight t
   ;; `auto-mode-alist' entries for `markdown-mode' are autoloaded
   :defer t)
 

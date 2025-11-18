@@ -4,13 +4,13 @@
 
 
 (use-package multiple-cursors
-  :ensure t)
+  :straight t)
 (use-package evil-mc
-  :ensure t)
+  :straight t)
 
 
 (use-package hydra
-  :ensure t
+  :straight t
   :commands 'hydra-mc/body)
 
 (keymap-set ctl-x-map "m" 'hydra-mc/body)

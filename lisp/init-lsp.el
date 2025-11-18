@@ -11,7 +11,7 @@
 
 
 (use-package lsp-mode
-  :ensure t
+  :straight t
   :commands (lsp lsp-deferred)
   :hook
   (lsp-mode . lsp-enable-which-key-integration)
@@ -28,7 +28,7 @@
   )
 
 ;; ;; optionally
-;; (use-package consult-lsp :ensure t)
+;; (use-package consult-lsp :straight t)
 ;; (use-package lsp-ui) ;; with this, you can see the code-actions, and re-enable auto-execute above
 ;; (use-package lsp-treemacs)
 

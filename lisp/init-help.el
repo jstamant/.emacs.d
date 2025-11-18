@@ -23,7 +23,7 @@
 ;; Beautiful help buffers
 ;; https://github.com/Wilfred/helpful
 (use-package helpful
-  :ensure t
+  :straight t
   ;; Seems to have autoloads on its commands
   :defer t
   :init
@@ -39,7 +39,7 @@
 
 ;; https://github.com/justbur/emacs-which-key
 (use-package which-key
-  :ensure t
+  :straight t
   :diminish which-key-mode
   :init
   (setq which-key-idle-delay 0.5)

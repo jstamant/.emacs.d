@@ -7,7 +7,7 @@
 
 
 (use-package sh-script
-  :ensure t
+  :straight t
   ;; hooks for `sh-mode' are automatically autoloaded
   :defer t
   :config

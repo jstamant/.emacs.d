@@ -4,7 +4,7 @@
 
 
 (use-package magit
-  :ensure t
+  :straight t
   :defer t
   :init
   (when (eq system-type 'windows-nt)
@@ -26,7 +26,7 @@
 ;; Highlight changes in the fringe, and navigate and/or stage them
 ;; https://github.com/dgutov/diff-hl
 (use-package diff-hl
-  :ensure t
+  :straight t
   :init (global-diff-hl-mode)
   ;; These enable indicators for dired
   :hook ((dired-mode . diff-hl-margin-local-mode)
@@ -41,7 +41,7 @@
 ;; Provides editing modes for special git files
 ;; https://github.com/magit/git-modes
 ;; Automatically adds .gitignore, .gitconfig, .gitattributes to `auto-mode-alist'
-(use-package git-modes :ensure t)
+(use-package git-modes :straight t)
 
 
 (provide 'init-git)

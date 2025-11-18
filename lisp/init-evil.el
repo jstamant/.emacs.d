@@ -5,7 +5,7 @@
 
 ;; https://github.com/emacs-evil/evil
 (use-package evil
-  :ensure t
+  :straight t
   :init
   ;; NOTE that most of these MUST be set before evil loads
   (setq evil-want-C-u-scroll t)
@@ -23,14 +23,14 @@
   (evil-mode))
 
 (use-package evil-surround
-  :ensure t
+  :straight t
   :after evil
   :config
   (global-evil-surround-mode))
 
 ;; Used for better default keybinds in Emacs modes
 (use-package evil-collection
-  :ensure t
+  :straight t
   :after evil
   :diminish evil-collection-unimpaired-mode
   :config
@@ -38,7 +38,7 @@
 
 ;; https://github.com/redguardtoo/evil-nerd-commenter
 (use-package evil-nerd-commenter
-  :ensure t
+  :straight t
   :after evil
   :init
   (setq evilnc-comment-text-object ";")

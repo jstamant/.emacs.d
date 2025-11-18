@@ -6,7 +6,7 @@
 ;; Completion-at-point mechanism
 ;; https://github.com/minad/corfu
 (use-package corfu
-  :ensure t
+  :straight t
   :init
   (global-corfu-mode))
 

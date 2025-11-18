@@ -6,7 +6,7 @@
 (column-number-mode 1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (use-package highlight-indent-guides
-  :ensure t
+  :straight t
   :diminish highlight-indent-guides-mode
   ;; This package has terrible performance in files with lots of indentation,
   ;; like in web-mode files
@@ -47,7 +47,7 @@
 
 
 (use-package expand-region
-  :ensure t
+  :straight t
   :defer t)
 
 (general-define-key "C-;" 'er/expand-region)

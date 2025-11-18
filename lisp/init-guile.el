@@ -4,10 +4,10 @@
 
 
 (use-package geiser
-  :ensure t)
+  :straight t)
 
 (use-package geiser-guile
-  :ensure t)
+  :straight t)
 
 
 (provide 'init-guile)

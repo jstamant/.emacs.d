@@ -5,7 +5,7 @@
 
 ;; https://github.com/oxalica/nil
 (use-package lsp-nix
-  :ensure lsp-mode
+  :straight lsp-mode
   :after (lsp-mode)
   :demand t
   :custom
@@ -17,13 +17,13 @@
 (add-hook 'nix-mode-hook 'lsp-deferred)
 
 (use-package nix-drv-mode
-  :ensure nix-mode
+  :straight nix-mode
   :mode "\\.drv\\'")
 (use-package nix-shell
-  :ensure nix-mode
+  :straight nix-mode
   :commands (nix-shell-unpack nix-shell-configure nix-shell-build))
 (use-package nix-repl
-  :ensure nix-mode
+  :straight nix-mode
   :commands (nix-repl))
 
 

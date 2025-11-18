@@ -4,7 +4,7 @@
 
 
 (use-package yaml-mode
-  :ensure t
+  :straight t
   ;; `auto-mode-alist' entry for `yaml-mode' is autoloaded
   :defer t)
 

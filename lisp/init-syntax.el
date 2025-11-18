@@ -8,7 +8,7 @@
 
 
 (use-package flymake
-  :ensure t)
+  :straight t)
 
 (with-eval-after-load 'flymake
   (jrs/emacs-leader-keys

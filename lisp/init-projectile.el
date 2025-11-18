@@ -4,7 +4,7 @@
 
 
 (use-package projectile
-  :ensure t
+  :straight t
   :defer t
   :diminish projectile-mode
   :bind-keymap ("C-x p" . projectile-command-map)
@@ -25,9 +25,9 @@
 
 ;; Need these to perform ag and ripgrep searches using projectile
 (use-package ag
-  :ensure t)
+  :straight t)
 (use-package rg
-  :ensure t)
+  :straight t)
 
 
 (provide 'init-projectile)

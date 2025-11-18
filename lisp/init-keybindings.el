@@ -16,7 +16,7 @@
 
 
 ;; https://github.com/noctuid/general.el
-(use-package general :ensure t)
+(use-package general :straight t)
 
 (general-auto-unbind-keys)
 

@@ -15,7 +15,7 @@
 (keymap-set search-map "r" 'projectile-ripgrep)
 
 (use-package hydra
-  :ensure t
+  :straight t
   :commands 'hydra-navigation/body)
 
 (keymap-set ctl-x-map "M" 'hydra-navigation/body)
@@ -50,7 +50,7 @@ See `jrs/scroll-down-half'."
   (jrs/scroll-down-half '-))
 
 (use-package avy
-  :ensure t
+  :straight t
   :bind (("C-\\" . avy-goto-char-timer)
          ("M-\\" . avy-goto-line))
   :init

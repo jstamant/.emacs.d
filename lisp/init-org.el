@@ -4,7 +4,7 @@
 
 
 (use-package org
-  :ensure t
+  :straight t
   :bind (:map org-mode-map
               ;; Next and previous errors for when using org-occur C-c /
               ("M-n" . next-error)
@@ -139,7 +139,7 @@ This command is usually invoked as an accident.\n")
 ;; TODO move roam into its own module
 ;; https://www.orgroam.com/manual.html
 (use-package org-roam
-  :ensure t
+  :straight t
   :init
   (setq org-roam-directory (concat drive-directory "/org-roam"))
   :config

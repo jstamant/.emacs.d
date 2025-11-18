@@ -4,7 +4,7 @@
 
 
 (use-package keyfreq
-  :ensure t
+  :straight t
   :config
   (keyfreq-mode)
   (keyfreq-autosave-mode))

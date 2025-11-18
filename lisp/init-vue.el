@@ -7,7 +7,7 @@
 ;;; Code:
 
 
-(use-package web-mode :ensure t)
+(use-package web-mode :straight t)
 
 (autoload 'web-mode "web-mode")
 (define-derived-mode vue-mode web-mode "Vue")

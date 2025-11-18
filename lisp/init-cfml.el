@@ -4,7 +4,7 @@
 
 
 (use-package cfml-mode
-  :ensure t
+  :straight t
   :mode (("\\.cfc\\'" . cfscript-mode)
          ("\\.cfm\\'" . cfscript-mode)))
 

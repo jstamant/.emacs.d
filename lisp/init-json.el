@@ -4,7 +4,7 @@
 
 
 (use-package json-mode
-  :ensure t
+  :straight t
   :defer t)
 
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))

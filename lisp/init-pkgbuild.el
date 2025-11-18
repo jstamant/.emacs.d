@@ -4,7 +4,7 @@
 
 
 (use-package pkgbuild-mode
-  :ensure t
+  :straight t
   :defer t
   :config
   (setq pkgbuild-update-sums-on-save nil))

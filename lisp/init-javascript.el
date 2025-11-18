@@ -20,7 +20,7 @@
 (setq js-indent-level 2)
 
 (use-package typescript-ts-mode
-  :ensure t
+  :straight t
   :mode (("\\.tsx?\\'" . tsx-ts-mode)
          ("\\.jsx?\\'" . tsx-ts-mode))
   :hook (tsx-ts-mode . lsp-deferred)
@@ -29,7 +29,7 @@
 
 
 (use-package typescript-mode
-  :ensure t
+  :straight t
   :defer t
   :init
   (setq typescript-indent-level 2))

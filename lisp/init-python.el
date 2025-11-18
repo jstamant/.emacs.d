@@ -4,7 +4,7 @@
 
 
 (use-package python
-  :ensure t
+  :straight t
   :defer t)
 
 (setq python-indent-offset 4)

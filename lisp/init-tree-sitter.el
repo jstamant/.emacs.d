@@ -4,7 +4,7 @@
 
 
 (use-package tree-sitter
-  :ensure t
+  :straight t
   :diminish tree-sitter-mode
   :config
   (global-tree-sitter-mode)
@@ -28,7 +28,7 @@
     (concat "Copied grammar files to " tree-sitter-dir)))
 
 (use-package tree-sitter-langs
-  :ensure t
+  :straight t
   :config
   ;; Automatically installs the tree-sitter grammars
   (if (not (file-exists-p (concat user-emacs-directory "tree-sitter/BUNDLE-VERSION")))

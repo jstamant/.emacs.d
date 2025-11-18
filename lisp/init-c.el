@@ -7,7 +7,7 @@
 
 
 (use-package cc-mode
-  :ensure t
+  :straight t
   :config
   (setq c-default-style "linux")
   (setq c-basic-offset 4))

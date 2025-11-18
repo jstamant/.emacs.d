@@ -4,7 +4,7 @@
 
 
 (use-package mermaid-mode
-  :ensure t
+  :straight t
   :mode "\\.mermaid\\'")
 
 

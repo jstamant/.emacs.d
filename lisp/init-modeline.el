@@ -4,7 +4,7 @@
 
 
 (use-package doom-modeline
-  :ensure t
+  :straight t
   :hook (after-init . doom-modeline-mode)
   :config
   (setq doom-modeline-height 21)
@@ -16,7 +16,7 @@
   (setq doom-modeline-buffer-file-name-style 'relative-from-project))
 
 (use-package nerd-icons
-  :ensure t)
+  :straight t)
 
 (keymap-set toggles-map "b" 'display-battery-mode)
 (keymap-set toggles-map "C-t" 'display-time-mode)

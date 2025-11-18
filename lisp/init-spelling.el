@@ -9,7 +9,7 @@
 
 
 (use-package ispell
-  :ensure t
+  :straight t
   :config
   (setq ispell-program-name "/usr/bin/aspell")) ; Change default spell checking program from ispell to aspell
 

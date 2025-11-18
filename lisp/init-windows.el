@@ -37,7 +37,7 @@
 (keymap-set global-map "M-o" 'other-window)
 
 (use-package ace-window
-  :ensure t)
+  :straight t)
 (keymap-set global-map "M-O" 'ace-window)
 
 

@@ -8,10 +8,10 @@
 
 
 (use-package apheleia
-  :ensure t)
+  :straight t)
 
 (use-package prettier
-  :ensure t)
+  :straight t)
 
 
 (provide 'init-formatter)

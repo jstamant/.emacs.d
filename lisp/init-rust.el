@@ -5,7 +5,7 @@
 
 ;; https://github.com/rust-lang/rust-mode
 (use-package rust-mode
-  :ensure t
+  :straight t
   ;; If I want to use rust-ts-mode, I'll need to setup the bindings from C-c C-c C-*
   ;; :mode ("\\.rs\\'" . rust-ts-mode)
   :init
