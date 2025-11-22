@@ -12,7 +12,7 @@
 
 (defun jrs/tree-sitter-langs-install-grammars ()
   "Custom function for installing the tree-sitter grammars found in
-`tree-sitter-langs--dir'. Returns a short message on completion."
+`tree-sitter-langs--dir'."
   (let ((tree-sitter-dir (concat user-emacs-directory "tree-sitter/"))
         (grammar-files (directory-files (concat tree-sitter-langs--dir "bin") nil ".*\\.[a-z]")))
     (make-directory tree-sitter-dir)
@@ -25,13 +25,13 @@
     (copy-file (concat tree-sitter-langs--dir "bin/BUNDLE-VERSION")
                (concat tree-sitter-dir)
                'override-files)
-    (concat "Copied grammar files to " tree-sitter-dir)))
+    (message (concat "Copied grammar files to " tree-sitter-dir))))
 
 (use-package tree-sitter-langs
   :straight t
   :config
   ;; Automatically installs the tree-sitter grammars
-  (if (not (file-exists-p (concat user-emacs-directory "tree-sitter/BUNDLE-VERSION")))
+  (unless (file-exists-p (concat user-emacs-directory "tree-sitter/BUNDLE-VERSION"))
     (jrs/tree-sitter-langs-install-grammars)))
 
 
