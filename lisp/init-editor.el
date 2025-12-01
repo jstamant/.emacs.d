@@ -48,7 +48,7 @@
 
 (use-package expand-region
   :straight t
-  :defer t)
+  :commands er/expand-region)
 
 (general-define-key "C-;" 'er/expand-region)
 (jrs/emacs-leader-keys
