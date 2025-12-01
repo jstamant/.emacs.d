@@ -13,14 +13,15 @@
   (setq magit-diff-refine-hunk 'all))
 
 (keymap-set ctl-x-map "g" 'magit-status)
+(keymap-set mode-specific-map "g" 'magit-status)
 
-(jrs/emacs-leader-keys
-  "g" '(:ignore t :which-key "git")
-  "gg" 'magit
-  "gs" 'magit-status)
+;; (jrs/emacs-leader-keys
+;;   "g" '(:ignore t :which-key "git")
+;;   "gg" 'magit
+;;   "gs" 'magit-status)
 
-(general-spc
-  "g" 'magit-status)
+;; (general-spc
+;;   "g" 'magit-status)
 
 
 ;; Highlight changes in the fringe, and navigate and/or stage them
