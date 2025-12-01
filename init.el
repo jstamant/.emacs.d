@@ -12,6 +12,7 @@
 ;; Bootstrap config
 
 (setq custom-file (locate-user-emacs-file "custom.el"))
+(when (file-exists-p custom-file) (load custom-file))
 (require 'init-package-manager)
 
 (require 'init-keybindings)
@@ -112,11 +113,6 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; Electric pairs
 (electric-pair-mode 1)
 (keymap-set toggles-map "P" 'electric-pair-mode)
-
-
-;; Finally, load variables configured from the 'customize' interface
-(when (file-exists-p custom-file)
-  (load custom-file))
 
 
 ;;; init.el ends here
