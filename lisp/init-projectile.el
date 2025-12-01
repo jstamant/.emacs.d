@@ -7,7 +7,9 @@
   :straight t
   :defer t
   :diminish projectile-mode
-  :bind-keymap ("C-x p" . projectile-command-map)
+  :bind-keymap
+  ("C-x p" . projectile-command-map)
+  ("C-c p" . projectile-command-map)
   :init
   (let ((directory (cond ((eq system-type 'gnu/linux)
                           "~/programming")
