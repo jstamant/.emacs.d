@@ -16,7 +16,7 @@
 (require 'init-package-manager)
 
 (require 'init-keybindings)
-(require 'init-modal)
+;; (require 'init-modal)
 ;;(require 'init-evil)
 (unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
 
@@ -113,6 +113,35 @@ This is great for when you're tinkering on your `user-init-file'"
 ;;;; Electric pairs
 (electric-pair-mode 1)
 (keymap-set toggles-map "P" 'electric-pair-mode)
+
+
+;; (defvar enabled-modules
+;;   '(;calc
+;;     modal)
+;;   "TODO update this docstring - it's my enabled modules")
+
+;; ;; TODO autoload this
+;; (defvar modules
+;;   nil ;; TODO need to discover all modules in modules folder
+;;   "TODO update, it's the list of all modules found")
+
+;; (defun require-module (module)
+;;   "TODO update this docstring"
+;;   (let ((load-path (list (expand-file-name "modules" user-emacs-directory)))
+;;         (load-suffixes '(".el")) ; TODO explain this optimization
+;;         (module-init-file (concat (symbol-name module) "/init.el")))
+;;     (load module-init-file nil nil 'nosuffix)
+;;     (message (format "%s loaded" module-init-file))))
+;; (add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
+;; (defun require-module (module)
+;;   "TODO update this docstring"
+;;   ;; I think changing this load path messes with operations inside the files...
+;;   (let (;(load-path (list (expand-file-name "modules" user-emacs-directory)))
+;;         (load-suffixes '(".el"))) ; TODO explain this optimization
+;;     (load (symbol-name module))
+;;     (message (format "%s loaded" module))))
+
+;; (mapcar #'require-module enabled-modules)
 
 
 ;;; init.el ends here
