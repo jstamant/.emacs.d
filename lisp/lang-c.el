@@ -1,4 +1,4 @@
-;;; init-c.el --- C/C++ settings and setup -*- lexical-binding: t -*-
+;;; lang-c.el --- C/C++ settings and setup -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;; clangd needs to be installed for LSP-use
@@ -13,5 +13,5 @@
   (setq c-basic-offset 4))
 
 
-(provide 'init-c)
-;;; init-c.el ends here
+(provide 'lang-c)
+;;; lang-c.el ends here

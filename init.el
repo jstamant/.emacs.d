@@ -1,11 +1,10 @@
-;;; init.el --- Load the full configuration -*- lexical-binding: t -*-
+;;; init.el -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(require 'init-benchmarking)
 (require 'init-performance)
 
 
@@ -15,29 +14,19 @@
 (when (file-exists-p custom-file) (load custom-file))
 (require 'init-package-manager)
 
-(require 'init-keybindings)
-;; (require 'init-modal)
-;;(require 'init-evil)
-(unbind-key "C-z" 'global-map) ; used to be 'suspend-frame, which would minimze emacs
-
+;;; Core setup
+(require 'core-keybindings)
+;; TODO move to core-*
+(require 'init-theme)
+(require 'init-ui)
+(require 'init-modeline)
+;; NOTE hmm...variables in here are user-specific, but required by org
 (require 'init-environment)
-
-(defun init ()
-  "Shortcut for finding your Emacs configuration file.
-Finds `user-init-file'"
-  (interactive)
-  (find-file user-init-file))
-(defun reload ()
-  "Shortcut for reloading your Emacs configuration.
-This is great for when you're tinkering on your `user-init-file'"
-  (interactive)
-  (load user-init-file))
 
 ;;; Editor
 (require 'init-capf)
 (require 'init-completions)
 (require 'init-editor)
-(require 'init-mc)
 (require 'init-navigation)
 
 ;;; Window management
@@ -45,28 +34,17 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-buffers)
 (require 'init-windows)
 
-;;; UI
-(require 'init-theme)
-(require 'init-ui)
-(require 'init-modeline)
-
 ;;; Checkers
 (require 'init-syntax)
 (require 'init-spelling)
 
 ;;; Emacs built-in packages
-(keymap-set ctl-x-map "c" 'calc)
-(general-spc "xc" 'calc)
 (require 'init-abbrev)
 (require 'init-dired)
 (require 'init-help)
 ;;;; VIEW MODE
-(use-package view
-  :bind ("C-x v" . view-mode))
 (setq view-read-only t) ;; Visit read-only buffers in view-mode by default
 
-;;;; MAN MODE
-(keymap-set help-map "M" 'man)
 
 ;;; Tools
 (use-package daemons :straight t)
@@ -84,8 +62,13 @@ This is great for when you're tinkering on your `user-init-file'"
 (use-package term
   :straight t)
 
+;;; Features
+(require 'feature-multiple-cursors)
+(require 'feature-search)
+
 ;;; Languages
-(require 'init-c)
+;; TODO move these to lang-* files
+(require 'lang-c)
 (require 'init-cfml)
 (require 'init-guile)
 (require 'init-javascript)
@@ -107,41 +90,11 @@ This is great for when you're tinkering on your `user-init-file'"
 (require 'init-web)
 (require 'init-yaml)
 
-;;;; search settings
-(setq isearch-lazy-count t) ; show number of search hits in the search prompt
-
 ;;;; Electric pairs
 (electric-pair-mode 1)
-(keymap-set toggles-map "P" 'electric-pair-mode)
 
-
-;; (defvar enabled-modules
-;;   '(;calc
-;;     modal)
-;;   "TODO update this docstring - it's my enabled modules")
-
-;; ;; TODO autoload this
-;; (defvar modules
-;;   nil ;; TODO need to discover all modules in modules folder
-;;   "TODO update, it's the list of all modules found")
-
-;; (defun require-module (module)
-;;   "TODO update this docstring"
-;;   (let ((load-path (list (expand-file-name "modules" user-emacs-directory)))
-;;         (load-suffixes '(".el")) ; TODO explain this optimization
-;;         (module-init-file (concat (symbol-name module) "/init.el")))
-;;     (load module-init-file nil nil 'nosuffix)
-;;     (message (format "%s loaded" module-init-file))))
-;; (add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
-;; (defun require-module (module)
-;;   "TODO update this docstring"
-;;   ;; I think changing this load path messes with operations inside the files...
-;;   (let (;(load-path (list (expand-file-name "modules" user-emacs-directory)))
-;;         (load-suffixes '(".el"))) ; TODO explain this optimization
-;;     (load (symbol-name module))
-;;     (message (format "%s loaded" module))))
-
-;; (mapcar #'require-module enabled-modules)
-
+;;; User setup
+(require 'user-keybindings)
+(require 'user-lisp)
 
 ;;; init.el ends here

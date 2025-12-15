@@ -1,7 +1,5 @@
 ;;; init-package-manager.el --- Package management setup -*- lexical-binding: t -*-
-
 ;;; Commentary:
-
 ;;; Code:
 
 

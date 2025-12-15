@@ -1,11 +1,4 @@
-;;; init-keybindings.el --- Set up generic keybindings and definers with general.el -*- lexical-binding: t -*-
-
-;;; Commentary:
-
-;; General provides a clean and convenient way of managing keybinds
-;; and prefixes across packages
-
-;;; Code:
+;;; core-keybindings.el --- Set up keybindings mechanisms -*- lexical-binding: t -*-
 
 
 ;; Remove the annoying suggestions for command abbreviations
@@ -34,5 +27,5 @@
 (general-spc "t" '(:keymap toggles-map :which-key "toggles"))
 
 
-(provide 'init-keybindings)
-;;; init-keybindings.el ends here
+(provide 'core-keybindings)
+;;; core-keybindings.el ends here

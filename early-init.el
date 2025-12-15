@@ -1,16 +1,14 @@
-;;; early-init.el --- Emacs 27+ pre-initialisation config
-
-;;; Commentary:
-
-;; Emacs 27+ loads this file before (normally) calling
-;; `package-initialize'.  We use this file to suppress that automatic
-;; behaviour so that startup is consistent across Emacs versions.
-
-;;; Code:
+;;; early-init.el -*- lexical-binding: t -*-
 
 (setq package-enable-at-startup nil)
 
-;; So we can detect this having been loaded
-(provide 'early-init)
+;; PERF Adjust garbage collection thresholds during startup
+(let ((normal-gc-cons-threshold (* 20 1024 1024))
+      (init-gc-cons-threshold (* 128 1024 1024)))
+  (setq gc-cons-threshold init-gc-cons-threshold)
+  (add-hook 'emacs-startup-hook
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
+
+(provide 'early-init)
 ;;; early-init.el ends here
