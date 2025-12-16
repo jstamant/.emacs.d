@@ -16,8 +16,7 @@
 (general-create-definer jrs/emacs-leader-keys
   :prefix "C-c")
 (jrs/emacs-leader-keys
-  "" '(:keymap mode-specific-map :which-key "<leader>")
-  "t" '(:keymap toggles-map :which-key "toggles"))
+  "" '(:keymap mode-specific-map :which-key "<leader>"))
 
 
 (general-create-definer general-spc

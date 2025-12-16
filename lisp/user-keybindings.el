@@ -11,12 +11,13 @@
 (keymap-set ctl-x-map "v" 'view-mode)
 
 ;; My leader key C-c
-(keymap-set mode-specific-map "m" '("multiple-cursors" . mc-transient))
+(keymap-set mode-specific-map "m" (cons "multiple-cursors" mc-map))
 
 ;; Help
 (keymap-set help-map "M" 'man)
 
 ;; Toggles
+(keymap-set mode-specific-map "t" (cons "toggles" toggles-map))
 (keymap-set toggles-map "P" 'electric-pair-mode)
 
 
