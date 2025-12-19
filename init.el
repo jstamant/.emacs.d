@@ -70,7 +70,7 @@
 ;; TODO move these to lang-* files
 (require 'lang-c)
 (require 'init-cfml)
-(require 'init-guile)
+(require 'lang-guile)
 (require 'init-javascript)
 (require 'init-json)
 (require 'init-ledger)
