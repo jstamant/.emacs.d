@@ -11,7 +11,10 @@
   :straight t)
 
 (use-package prettier
-  :straight t)
+  :straight t
+  :init
+  ;; Wait for first save to start prettier
+  (setq prettier-pre-warm 'none))
 
 
 (provide 'init-formatter)
