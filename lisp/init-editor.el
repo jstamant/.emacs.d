@@ -25,15 +25,20 @@
 ;; (setq-default show-trailing-whitespace t) ;; setq-default to enable globally
 (add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
+;; Sensible formatting defaults. Enable `visual-line-mode' if you want
+;; soft line-wrapping. `auto-fill-mode' for hard line-wrapping.
+(setq-default fill-column 80)
+(setq-default word-wrap t)
+(setq-default truncate-lines t)
+(setq truncate-partial-width-windows nil)
+(setq require-final-newline t)
+(setq sentence-end-double-space nil)
+
 (use-package autorevert
   :diminish auto-revert-mode)
 
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-
-;; Set sentences to be identified by a period and a single space, instead of two spaces
-(setq sentence-end "[.?!][]\"')]*\\($\\|\t\\| \\)[ \t\n]*")
-(setq sentence-end-double-space nil)
 
 (general-define-key "C-:" 'exchange-point-and-mark)
 
