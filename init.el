@@ -63,6 +63,7 @@
   :straight t)
 
 ;;; Features
+(require 'feature-direnv)
 (require 'feature-multiple-cursors)
 (require 'feature-search)
 
