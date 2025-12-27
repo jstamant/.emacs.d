@@ -89,6 +89,7 @@
 (require 'init-vue)
 (require 'init-web)
 (require 'init-yaml)
+(require 'lang-zig)
 
 ;;;; Electric pairs
 (electric-pair-mode 1)
