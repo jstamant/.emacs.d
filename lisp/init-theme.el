@@ -65,10 +65,18 @@
   :hook (yaml-mode . hl-todo-mode)
   :config
   (setq hl-todo-highlight-punctuation ":")
-  (add-to-list 'hl-todo-keyword-faces '("TODO" warning bold))
-  (add-to-list 'hl-todo-keyword-faces '("DEPRECATED" font-lock-doc-face bold))
-  (add-to-list 'hl-todo-keyword-faces '("PERF" font-lock-doc-face bold))
-  (add-to-list 'hl-todo-keyword-faces '("NOTE" warning bold)))
+  (setq hl-todo-keyword-faces
+        (append
+         '(("TODO" warning bold)
+           ("FIXME" error bold)
+           ("REVIEW" font-lock-keyword-face bold)
+           ("HACK" font-lock-constant-face bold)
+           ("DEPRECATED" font-lock-doc-face bold)
+           ("PERF" font-lock-doc-face bold)
+           ("NOTE" success bold)
+           ("BUG" error bold)
+           ("XXX" font-lock-constant-face bold))
+         hl-todo-keyword-faces)))
 
 
 ;; Making links clickable and highlighted
