@@ -11,6 +11,7 @@
 (keymap-set ctl-x-map "v" 'view-mode)
 
 ;; My leader key C-c
+(keymap-set mode-specific-map "e" (cons "eglot" eglot-command-map))
 (keymap-set mode-specific-map "m" (cons "multiple-cursors" mc-map))
 
 ;; Help

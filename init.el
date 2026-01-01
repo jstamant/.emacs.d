@@ -55,7 +55,6 @@
 (require 'init-git)
 (use-package guix :straight t)
 (require 'init-keyfreq)
-(require 'init-lsp)
 (require 'init-projectile)
 (require 'init-tree-sitter)
 ;;;; TERM SETTINGS
@@ -64,6 +63,7 @@
 
 ;;; Features
 (require 'feature-direnv)
+(require 'feature-lsp)
 (require 'feature-multiple-cursors)
 (require 'feature-search)
 

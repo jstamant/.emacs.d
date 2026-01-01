@@ -1,4 +1,4 @@
-;;; init-lsp.el --- LSP setup -*- lexical-binding: t -*-
+;;; feature-lsp.el --- LSP setup -*- lexical-binding: t -*-
 
 ;;; Commentary:
 
@@ -6,8 +6,21 @@
 ;; https://emacs-lsp.github.io/lsp-mode/
 ;; https://emacs-lsp.github.io/lsp-mode/page/languages/
 
-
 ;;; Code:
+
+
+(straight-use-package '(eglot :type built-in))
+(defvar-keymap eglot-command-map
+  :doc "Keymap for accessing commands related to LSP. Could also be renamed to
+something like lsp-command-map."
+  "c" 'eglot-code-actions
+  "e" 'eglot
+  "f" 'eglot-format
+  "h" '("hints" . eglot-inlay-hints-mode)
+  "q" 'eglot-shutdown
+  "Q" 'eglot-shutdown-all
+  "r" 'eglot-rename
+  "R" 'eglot-reconnect)
 
 
 (use-package lsp-mode
@@ -36,5 +49,5 @@
 ;; (use-package dap-mode)
 
 
-(provide 'init-lsp)
-;;; init-lsp.el ends here
+(provide 'feature-lsp)
+;;; feature-lsp.el ends here
