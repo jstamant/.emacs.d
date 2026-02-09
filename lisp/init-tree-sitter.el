@@ -7,8 +7,9 @@
   :straight t
   :diminish tree-sitter-mode
   :config
-  (global-tree-sitter-mode)
-  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+  ;; I don't currently want this enabled for all ts-modes - example, it looks like shit in zig-ts-mode
+  ;; (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+  (global-tree-sitter-mode))
 
 (defun jrs/tree-sitter-langs-install-grammars ()
   "Custom function for installing the tree-sitter grammars found in

@@ -56,7 +56,7 @@
 (use-package guix :straight t)
 (require 'init-keyfreq)
 (require 'init-projectile)
-(require 'init-tree-sitter)
+(require 'init-tree-sitter) ;; TODO move this to feature-tree-sitter
 ;;;; TERM SETTINGS
 (use-package term
   :straight t)

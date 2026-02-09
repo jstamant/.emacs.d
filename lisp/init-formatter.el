@@ -10,11 +10,11 @@
 (use-package apheleia
   :straight t)
 
-(use-package prettier
-  :straight t
-  :init
-  ;; Wait for first save to start prettier
-  (setq prettier-pre-warm 'none))
+;; (use-package prettier
+;;   :straight t
+;;   :init
+;;   ;; Wait for first save to start prettier
+;;   (setq prettier-pre-warm 'none))
 
 
 (provide 'init-formatter)
